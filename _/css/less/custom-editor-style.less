@@ -1,0 +1,119 @@
+@import url('vars.less');
+
+@import url('mixins.less');
+
+body {
+.font-normal;	
+}
+
+h1, h2, h3, h4, h5 {
+.mag-top(0);
+.col(@gray);
+}
+
+p, ul, ol {
+.font-size(1.6);
+.line-h(2);	
+}
+
+p {
+	.mag-bot(2);
+	&.intro {
+	.col(lighten(@grayDk, 10%));	
+	}
+	
+	&.bold {
+	.bold;	
+	}
+	
+	&.lrg {
+	.pad-bot(5);
+	.font-size(2.5);
+	.line-h(3);
+	.mag-bot(0);
+	.col(@gray);
+	}
+	
+	&:last-child {
+	.mag-bot(0);	
+	}
+}
+
+//Unordered list
+ul {
+list-style: none;
+.pad-left(2);
+.mag-bot(2);
+	li {
+	.pad-left(2);
+	.rel;
+	}
+	li:before {
+	.abs;
+	.left(0);
+	content: "\00BB";
+	.col(@gray);
+	.bold;		
+	.mag-right(1);
+	}
+	
+}
+
+//Ordered list
+ol {
+list-style: none;
+.pad-left(2);
+.mag-bot(2);
+list-style-position: inside;
+counter-reset: item;
+	li {
+	//counter-increment: list-counter;
+	//.pad-left(2);
+	.rel;
+		&:before {
+		content: counters(item, ".") " - ";
+		counter-increment: item;
+		.col(@gray);
+		.bold;
+		}
+	}
+}
+
+blockquote {
+.italic;
+.col(@gray);
+.border-col( lighten(@grayDk, 20%) );	
+.pad-top(0.5);
+.pad-bot(0.5);
+}
+
+.caps {
+.caps;	
+}
+
+h1, h2 {
+.font-size(2.5);
+.font-lite;	
+.col(@grayDk);
+}
+
+h3 {
+.font-size(2.5);
+.font-lite;	
+}
+
+h4, h5 {
+.font-size(1.8);
+}
+
+hr {
+.border-col(lighten(@gray, 20%));	
+}
+
+a {
+.col(@red);
+text-decoration: underline;
+	&:hover, &:active, &:focus {
+	.col(@redMid);
+	}	
+}

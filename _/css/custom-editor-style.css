@@ -1,0 +1,360 @@
+/* BASE SIZES */
+/* COLORS */
+/* MP COLORS */
+/* SOCIAL COLOURS */
+/* SCREEN SIZES */
+/* FONTS */
+@font-face {
+  font-family: 'open_sanslight';
+  src: url('fonts/OpenSans-Light-webfont.eot');
+  src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Light-webfont.woff') format('woff'), url('fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'aleoreg';
+  src: url('fonts/aleo-regular-webfont.eot');
+  src: url('fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aleo-regular-webfont.woff') format('woff'), url('fonts/aleo-regular-webfont.ttf') format('truetype'), url('fonts/aleo-regular-webfont.svg#aleoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* LINKS */
+.no-text-dec {
+  text-decoration: none;
+}
+.underline {
+  text-decoration: underline;
+}
+/* TEXT */
+.font-lite {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+}
+.font-normal {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+}
+.font-serif {
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  font-weight: normal;
+  font-stretch: normal;
+}
+.font-slab-serif {
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+}
+.txt-col-red {
+  color: #C60751;
+}
+.txt-col-gray {
+  color: #918F8F;
+}
+.txt-col-grayDk {
+  color: #4b4b4b;
+}
+.txt-col-purple {
+  color: #A677B4;
+}
+.txt-col-green {
+  color: #ACD15C;
+}
+.txt-col-pink {
+  color: #EA5677;
+}
+.txt-col-orange {
+  color: #FBAD4F;
+}
+.txt-col-blue {
+  color: #2D7EA9;
+}
+.caps {
+  text-transform: uppercase;
+}
+.no-caps {
+  text-transform: none;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.list-style-gone {
+  list-style: none;
+  padding-left: 0px;
+}
+/* BACKGROUND */
+.bg-col-gray {
+  background-color: #918F8F;
+}
+.bg-col-grayDk {
+  background-color: #4b4b4b;
+}
+.bg-col-grayLt {
+  background-color: #E9E9E9;
+}
+.bg-col-red {
+  background-color: #C60751;
+}
+.bg-col-purple {
+  background-color: #A677B4;
+}
+.bg-col-green {
+  background-color: #ACD15C;
+}
+.bg-col-pink {
+  background-color: #EA5677;
+}
+.bg-col-orange {
+  background-color: #FBAD4F;
+}
+.bg-col-blue {
+  background-color: #2D7EA9;
+}
+/* SIZE */
+/* DISPLAY */
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.in-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.over-hide {
+  overflow: hidden;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.no-float {
+  float: none;
+}
+.clear {
+  clear: both;
+}
+/* POSITION */
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+/* MARGIN */
+.mag-auto {
+  margin: auto;
+}
+/* PADDING */
+/* BORDERS */
+.no-border {
+  border: none;
+}
+.shadow-inset-none {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+.no-box-sizing {
+  -webkit-box-sizing: content-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.no-rounded {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.no-transition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.rule {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  position: relative;
+}
+.rule:before,
+.rule:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+}
+.rule:before {
+  bottom: -1px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(#918F8F));
+  background-image: -webkit-linear-gradient(left, transparent, #918F8F);
+  background-image: -moz-linear-gradient(left, transparent, #918F8F);
+  background-image: -o-linear-gradient(left, transparent, #918F8F);
+}
+.rule:after {
+  right: 0px;
+  bottom: -1px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#918F8F), to(transparent));
+  background-image: -webkit-linear-gradient(left, #918F8F, transparent);
+  background-image: -moz-linear-gradient(left, #918F8F, transparent);
+  background-image: -o-linear-gradient(left, #918F8F, transparent);
+}
+.striped-overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  background-image: url(img/striped-img-overlay.png);
+  background-blend-mode: color-burn;
+}
+.col-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-blend-mode: multiply;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0px;
+  color: #918F8F;
+}
+p,
+ul,
+ol {
+  font-size: 16px;
+  line-height: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
+p.intro {
+  color: #656565;
+}
+p.bold {
+  font-weight: bold;
+}
+p.lrg {
+  padding-bottom: 50px;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 0px;
+  color: #918F8F;
+}
+p:last-child {
+  margin-bottom: 0px;
+}
+ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+ul li {
+  padding-left: 20px;
+  position: relative;
+}
+ul li:before {
+  position: absolute;
+  left: 0px;
+  content: "\00BB";
+  color: #918F8F;
+  font-weight: bold;
+  margin-right: 10px;
+}
+ol {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  list-style-position: inside;
+  counter-reset: item;
+}
+ol li {
+  position: relative;
+}
+ol li:before {
+  content: counters(item, ".") " - ";
+  counter-increment: item;
+  color: #918F8F;
+  font-weight: bold;
+}
+blockquote {
+  font-style: italic;
+  color: #918F8F;
+  border-color: #7e7e7e;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.caps {
+  text-transform: uppercase;
+}
+h1,
+h2 {
+  font-size: 25px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+  color: #4b4b4b;
+}
+h3 {
+  font-size: 25px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+}
+h4,
+h5 {
+  font-size: 18px;
+}
+hr {
+  border-color: #c4c2c2;
+}
+a {
+  color: #C60751;
+  text-decoration: underline;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #7A1039;
+}

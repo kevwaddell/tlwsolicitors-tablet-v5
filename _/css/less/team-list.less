@@ -1,0 +1,64 @@
+.team-list-box {
+	.rel;
+	.min-h(19);
+	
+	.profile-img {
+	.abs;
+	.top(0);
+	.bottom(0);
+	.min-h(20);
+	.max-h(35);	
+	
+		figure {
+			.abs;
+			.left(1.5); 
+			.right(0);
+			.top(0);
+			.bottom(0);
+			.bg-col(white);
+			.bg-repeat(no-repeat);
+			background-position: center top;
+			.bg-size;
+			.over-hide;
+			
+			img {
+			.abs;
+			.top(0);
+			.left(0);
+			width: 100%;
+			height: auto;	
+			}
+		}
+	}
+	
+	p.position {
+	.col(@red);
+	.mag-bot(0);
+	}
+	
+	a.icon-btn {
+	.mag-bot(0);
+	.mag-top(1);	
+	}
+	
+	a.email-link {
+	.block;
+	.mag-bot(1);	
+	}
+	
+	.txt {
+	.mag-bot(1);
+		p {
+		.font-size(1.4);
+		.line-h(1.8);	
+		}
+	}
+	
+	h4 {
+	.font-size(3);	
+	}
+	
+	&:last-child{
+	.mag-bot(0);		
+	}
+}

@@ -1,0 +1,177 @@
+#how-it-works {
+.fixed;
+.over-hide;
+.top(0);
+.left(0);
+.right(0);
+height: 100%;
+.min-w(120);
+.min-h(60);
+.trans-bg(@gray; 0.7);
+z-index: 20;
+-webkit-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+-ms-animation-duration: 0.5s;
+animation-duration: 0.5s;
+
+	button#close-how-it-works {
+	.abs;
+	.right(2);
+	.top(2);
+	.no-border;
+	.pad-all(0);
+	.w(4);
+	.h(4);
+	.rounded(20px);
+	.bg-col(white);
+	.col(@gray);
+	.opacity(0.3);
+		&:hover, &:active, &:focus {
+		.opacity(1);
+		}
+	}
+
+	.step {
+	.w(114);
+	.pad(7;2;7;2);
+	.bg-col(@gray);
+	.border(white; 0.4);
+	.rounded(12px);
+	text-align: center;
+	.drop-shadow(0, 0, 20px, 0.5);
+	
+		.icon {
+		.abs;
+		.top(-5);
+		left: 50%;
+		.mag-left(-5);
+		.w(10);
+		.h(10);
+		.bg-col(white);
+		text-align: center;
+		.rounded(50px);
+			i {
+			.line-h(10);
+			.col(@gray);
+			}	
+			
+			&:after {
+			.abs;
+			.top(0.5);
+			.left(0);
+			content: "";
+			.bg-col(darken(@gray, 20%));
+			width: 100%;
+			height: 100%;
+			.rounded(50px);
+			z-index: -1;
+			}
+		}
+
+		p {
+		.bold;	
+		}
+		p.header {
+		.col(white);
+		.caps;	
+		.font-size(4.5);
+		.line-h(4.5);
+		.mag-bot(2);
+		}
+		
+		p.text {
+		.col(@grayDk);
+		.font-size(3);
+		.line-h(3.6);	
+		.mag-bot(0);
+			span {
+			.col(white);
+			.caps;	
+			}
+		}
+		
+		a {
+		.block;
+		.caps;	
+		text-align: center;
+		.no-text-dec;
+			span {
+			.in-block;	
+			.pad(0;2;0;5);
+			.h(4);
+			.bg-col(white);
+			.rounded(8px);
+			.line-h(3.2);
+			.rel;
+			.border(white; 0.4);
+				i {
+				.abs;
+				.h(4);	
+				.line-h(3.2);
+				.left(2);
+				}
+			}
+			&:hover, &:active, &:focus {
+			
+				span {
+				.bg-col(@grayDk);
+				.col(white);	
+				}
+			}
+			&.back-link {
+			.abs;
+			.top(-12);
+			left: 50%;
+			.line-h(4);
+			.mag-left(-2);
+			.pad-all(0);	
+			.w(4);
+			.bg-col(white);
+			.col(@gray);
+			.opacity(0.3);
+			.rounded(8px);
+				&:hover, &:active, &:focus {
+				.opacity(1);
+				}
+			}
+			&.step-link, &.end-link {
+			.abs;
+			width: 50%;
+			.bottom(-2);	
+			left: 0;
+			}
+			&.link-mid {
+			left: 50%;
+			margin-left: -25%;	
+			}
+			&.link-right {
+			left: auto;
+			right: 0;	
+			}
+		}	
+	}
+	
+	&.panel-red {
+		.how-it-works-cols(@red);
+	}
+	
+	&.panel-purple {
+		.how-it-works-cols(@purple);
+	}
+	
+	&.panel-green {
+		.how-it-works-cols(@green);
+	}
+	
+	&.panel-pink {
+		.how-it-works-cols(@pink);
+	}
+	
+	&.panel-orange {
+		.how-it-works-cols(@orange);
+	}
+	
+	&.panel-blue {
+		.how-it-works-cols(@blue);
+	}
+}

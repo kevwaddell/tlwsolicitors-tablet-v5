@@ -1,0 +1,101 @@
+#footer-info {
+.bg-col(@grayDk);
+.pad(3;0;6.5;0);
+.bg-img("bg-icon-logo.png?v=3");
+.bg-repeat(no-repeat);
+.bg-size(40%);
+background-position: right bottom;
+.col(white);
+
+	.social-links {
+	.mag-bot(1);	
+		
+		ul {
+		list-style: none;
+		.pad-left(0);
+		text-align: center;
+		}	
+		
+		li {
+		.in-block;	
+		.mag-left(0.8);
+		.mag-right(0);
+		}
+		
+		a {
+		.bg-col(white);
+		.col(@grayDk);
+		.block;
+		.w(4);
+		.h(4);
+		.rounded(20px);
+		.no-text-dec;
+			
+			span {
+			.none;	
+			}
+			
+			i {
+			.block;
+			.w(4);
+			.h(4);	
+			.line-h(4);
+			font-size: 1.8em;
+			text-align: center;
+			}	
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@red);
+			.col(white);
+			}
+		}
+	}
+	
+	.compliance-notice {	
+	text-align: center;
+	.mag-bot(1);
+		br {
+		.none;	
+		}
+	}
+	
+	.lexcel-logo {
+	margin: 0px auto 20px;
+	.w(12);
+	.h(6.5);	
+	.bg-size(contain);
+	.bg-repeat(no-repeat);
+	background-position: center center;
+		
+		a {
+		.block;
+		height: 100%;
+		.indent(-999);	
+		}
+	}
+	
+	.headway-logo {
+	margin: 0px auto 20px;
+	.w(12);
+	.h(12);
+	.bg-col(white);	
+	.rounded(100%);
+	.bg-size(90%);
+	.bg-repeat(no-repeat);
+	background-position: center center;
+		
+		a {
+		.block;
+		height: 100%;
+		.indent(-999);	
+		}
+	}
+	
+	.copyright {
+	text-align: center;
+		br {
+		.none;	
+		}
+	}
+	
+}
