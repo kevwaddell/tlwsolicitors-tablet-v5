@@ -20,6 +20,7 @@ body#login {
 	text-align: center;	
 	.pad-all(2);
 	height: 100%;
+	.bg-img('thin-stripe-wht.png');
 		&:before {
 			content: "";
 			.in-block;
@@ -32,41 +33,18 @@ body#login {
 	.login {
 	.in-block;
 	vertical-align: middle;
-	.pad(6;2;2;2);
+	.rounded(20px);
+	.pad(9;2;2;2);
 	.trans-bg(white; 0.9);
-	.bg-img('tlw-logo-mobile.png');
+	.bg-img('tlw-logo-wide.png');
 	.bg-repeat(no-repeat);
 	background-position: 50% 10px;
 	width: 80%;
-	.max-w(30);
+	.max-w(40);
 	.drop-shadow( 0, 0, 20px, 0.5); 	
-	
-		@media (min-width: @screen-sm) {
-		.pad-top(10);
-		.max-w(40);
-		.bg-img('tlw-logo.png');
-		}
-		
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-			only screen and (   min--moz-device-pixel-ratio: 1.5),
-			only screen and (     -o-min-device-pixel-ratio: 3/2),
-			only screen and (        min-device-pixel-ratio: 1.5){ 
-			.bg-img("x2/tlw-logo-mobile-x2.png");
-			.bg-size(65%);
-				
-			@media (min-width: @screen-sm) { 
-			.bg-img("x2/tlw-logo-x2.png");
-			.bg-size(35%);
-			background-position: 50% 5px;
-			}
-		}
-		
-		input {
-		.no-rounded;	
-		}
 		
 		.form-control {
-		.h(3);	
+		.h(5);	
 			&:focus {
 			.border-col(@red);	
 			}
@@ -74,11 +52,13 @@ body#login {
 		
 		p.submit {
 			input.btn {
-			.no-rounded;
 			.bg-col(@gray);
 			.col(white);
 			.caps;
-			.border-col(@grayDk);	
+			.no-border;
+			.font-slab-serif;
+			.h(5);
+			.font-size(2);
 				&:hover, &:active, &:focus {
 				.bg-col(lighten(@gray, 10%));
 				}
@@ -86,7 +66,7 @@ body#login {
 		}
 	
 		.tml-action-links {
-		.mag-all(0);
+		.mag(2;0;2;0);
 		.pad-all(0);
 		list-style: none;
 		
@@ -96,11 +76,11 @@ body#login {
 		
 			a {
 			.block;
-			.h(3);
-			.line-h(3);
+			.h(5);
+			.line-h(5);
 			.col(black);
 			text-align: center;
-			.no-rounded;
+			.rounded(4px);
 			.no-text-dec;
 			.border(@grayDk, 0.1);
 			.caps;

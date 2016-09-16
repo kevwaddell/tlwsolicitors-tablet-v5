@@ -1,41 +1,40 @@
 <?php get_header(); ?>
 
-	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
-	
-		<div class="content">
+<!-- MAIN CONTENT START -->
 
 <?php
 $news_page_id = get_option('page_for_posts');
 $news_page = get_page($news_page_id);
-//echo '<pre>';print_r($news_page);echo '</pre>';
-$news_page_content_raw = $news_page->post_content;
-$news_page_content = apply_filters('the_content', $news_page_content_raw );
-$news_page_intro = get_field('intro', $news_page->ID);
 $page_icon = get_field('page_icon', $news_page->ID);
+	
+	if ( has_post_thumbnail($news_page_id) ) {
+	$img_post = get_page($news_page_id);
+	}
 ?>
+
 <!-- PAGE TOP SECTION -->
-			<main class="page-col-red animated fadeIn">
-				
-				<article class="page">
-					
-					<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.php'); ?>
-					
-					<!-- CATEGORY LIST -->
-					<?php include (STYLESHEETPATH . '/_/inc/posts/category-post-list.php'); ?>	
-					
-					<!-- CATEGORIES LIST -->
-					<?php include (STYLESHEETPATH . '/_/inc/posts/index-cats-list.php'); ?>		
-					
-					<!-- SOCIAL FEED LARGE -->
-					<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-lrg.php'); ?>	
-						
-				</article>
-								
-			</main>		
-			
-		</div><!-- CONTENT END -->
+<main class="page-col-red">
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
+	
+	<?php if ($img_post) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
+	<?php } ?>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.inc'); ?>
+	
+	<!-- CATEGORY LIST -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/index-post-list.inc'); ?>	
+	
+	<!-- SOCIAL FEED LARGE -->
+	<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-slider.inc'); ?>
+			
+	
+</main>		
+<!-- MAIN CONTENT CONTAINER END -->
 	
 <?php get_footer(); ?>

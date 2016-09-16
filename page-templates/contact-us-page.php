@@ -1,52 +1,53 @@
 <?php 
 /*
-Template Name: Contact Us Page v2
+Template Name: Contact Us Page
 */
  ?>
 
 <?php get_header(); ?>
 
-	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
-	
-		<div class="content">
 
-			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-			<?php $form = get_field('form'); ?>	
-			
-			<main <?php post_class('page-col-red animated fadeIn'); ?>>
-			 	
-			 	<div class="row">
-				 	
-				 	<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-					 	<div class="main-txt">
-							<?php the_content(); ?>
-						</div>
-				 	</div>
-				 	
-					<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-0">
+<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+<?php 
+$color = get_field('page_colour');
+$sections_active = get_field('sections_active');
 
-						<a id="make-a-claim" name="make-a-claim"></a>
-						
-						<div class="contact-form">
-						<?php if ($form) { ?>
-						<h3 class="icon-header" style="margin-bottom: 0px;"><?php echo $form->title; ?> <i class="fa fa-cog fa-lg"></i></h3>
-						<?php gravity_form($form->id, false, true, false, null, true); ?>
-						
-						<?php }  ?>
-						</div>
-						
-					</div>
-					
-					<?php get_template_part( 'parts/sidebars/sidebar', 'contact-us' ); ?>				
-					
-			</main>
-					
-			<?php endwhile; ?>
-<?php endif; ?>
+if ( has_post_thumbnail() ) {
+$img_post = get_the_ID();
+}
 
-		</div><!-- CONTENT END -->
+ ?>	
+
+<main <?php post_class('page-col-red'); ?>>
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+	<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
+	
+	<!-- MAIN TEXT SECTION -->
+	<?php include (STYLESHEETPATH . '/_/inc/contact-us/main-content-section.inc'); ?>
+		
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+				<?php include (STYLESHEETPATH . '/_/inc/contact-us/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'location-map') { ?>
+				<!-- LOCATION SECTION -->
+				<?php include (STYLESHEETPATH . '/_/inc/sections/location-section.inc'); ?>		
+				<?php } ?>
+	
+			<?php } ?>
+		
+		<?php } ?>
+		
+</main>
+		
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -4,105 +4,88 @@ Template Name: General Service page
 */
  ?>
 
-<?php get_header(); ?>
+<?php get_header(); ?>	
+	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
-	$freephone_num = get_field('freephone_num', 'option');
-	$number_pos = get_field('tel_num_position');
-	if (empty($number_pos)) {
-	$number_pos = "bottom";	
-	}
-	$page_icon = get_field('page_icon');
-	$download_active = get_field('download_active');
-	$brochure = get_field('brochure');
-	$bk_download_active = get_field('bk_download_active');
-	$color = get_field('page_colour');
-	$hide_title = get_field('hide_title'); 
-	$parent = get_page($post->post_parent);
-	$feedback_active = get_field('feedback_active'); 
-	$how_it_works_active = get_field('hiw_active');
-	
-	if ( has_post_thumbnail() ) {
-	$img_post = get_the_ID();
-	} else {
-	$img_post = $post->post_parent;
-	$parent = get_post($img_post);	
-	
-		if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
-		$img_post = $parent->post_parent;
+		$color = get_field('page_colour');
+		$page_icon = get_field('page_icon');
+		$sections_active = get_field('sections_active');
+		$banner_active = get_field('banner_active');	
+		$quick_links = array();
+		
+		if ( has_post_thumbnail() ) {
+		$img_post = get_the_ID();
 		}
-	}
-	
-	//echo '<pre>';print_r($page_icon);echo '</pre>';
-	
-	if ($page_icon == 'null' || !$page_icon) {
-	$parent = get_page($post->post_parent);
-	$grand_parent = $parent->post_parent;
-	$page_icon = get_field('page_icon', $post->post_parent);
-		if ($page_icon == 'null' || !$page_icon) {
-		$page_icon = get_field('page_icon', $grand_parent);	
-		}
-	}
 	?>	
 	
-	<?php if ( has_post_thumbnail($img_post) ) { ?>
-		<?php include (STYLESHEETPATH . '/_/inc/service-page/wide-feat-img.php'); ?>
-	<?php } ?>
-
 	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
-	
-		<div class="content">
-			<a name="main-content" id="main-content"></a>
-			<!-- PAGE TOP SECTION -->
-			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeIn">
-				
-					<article <?php post_class(); ?>>
-					
-						<div class="row">
-			
-							<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-0">
-								
-								<div class="entry wide-entry">
-								
-									<header class="pg-header">	
-									<?php if ($hide_title == 1) { ?>
-									<div class="service-tag"><?php echo get_the_title(); ?></div>
-									<?php } ?>	
-									<?php if ($hide_title != 1) { ?>		
-									<h1><?php the_title(); ?></h1>
-									<?php } ?>
-									</header>
-									
-									<div class="main-txt">
-										<?php the_content(); ?>
-									</div>
-									
-									<?php include (STYLESHEETPATH . '/_/inc/service-page/booklet-download.php'); ?>
-									
-									<?php include (STYLESHEETPATH . '/_/inc/service-page/faqs.php'); ?>
-									
-									<?php include (STYLESHEETPATH . '/_/inc/service-page/footer-info.php'); ?>
-																				
-								</div>
-							
-							</div>
-								
-							<?php get_template_part( 'parts/sidebars/sidebar', 'services' ); ?>
-							
-						</div>
-						
-					</article>
-					
-			</main>
-			<!-- PAGE TOP SECTION -->
-
-		</div><!-- CONTENT END -->
+	<main>
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+		<!-- BANNER SECTION -->
+		<?php if ($banner_active) { 
+		$banner_type = get_field('banner_type');	
+		?>
+		
+			<?php if ($banner_type == 'slider') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/testimonial-slider.inc'); ?>			
+			<?php } ?>
+			
+			<?php if ($banner_type == 'slim-img') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
+			<?php } ?>	
+			
+			<?php if ($banner_type == "video") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
+			<?php } ?>
+			
+			<?php if ($banner_type == "img") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
+			<?php } ?>	
+			
+		<?php } ?>		
+		
+		
+		<!-- MAIN TEXT SECTION -->
+		<?php include (STYLESHEETPATH . '/_/inc/sections/main-content-section.inc'); ?>
+		
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+			
+				<?php if ($section['acf_fc_layout'] == 'feedback-section') { ?>
+				<!-- FEEDBACK SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'blog-posts') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'downloads-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'toolkit-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc'); ?>		
+				<?php } ?>
 	
-	<?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
-						
+			<?php } ?>
+		
+		<?php } ?>
+		
+	</main>	
 	<?php endwhile; ?>
 	<?php endif; ?>
 

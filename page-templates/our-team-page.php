@@ -3,77 +3,100 @@
 Template Name: Team Profiles Page
 */
  ?>
-
-<?php get_header(); ?>
-	<!-- MAIN CONTENT START -->
-	<div class="container-fluid">
+ 
+ <?php get_header(); ?>	
 	
-		<div class="content">
-			
-			<?php
-			$position_args = array(
-				'orderby'       => 'meta_value', 
-			    'hide_empty'    => true); 
-			$positions = get_terms( 'tlw_positions_tax', $position_args );
-			//echo '<pre>';print_r($positions);echo '</pre>';
-			$tabs_counter = 0;
-			$panels_counter = 0;
-			$freephone_num = get_field('freephone_num', 'option');
-			?>
-			
-			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-			<?php 
-			$hide_title = get_field('hide_title'); 
-			$page_icon = get_field('page_icon');
-			$color = get_field('page_colour');
-			
-			if (!$page_icon) {
-			$page_icon = get_field('page_icon', $post->post_parent);
-			}
-			 ?>	
-			<!-- PAGE TOP SECTION -->
-			<main class="page-col-red animated fadeIn">
-					
-					<article <?php post_class(); ?>>
-					
-						<div class="row">
-						
-							<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-0">
-													
-								<div class="entry wide-entry">
-									
-									<header class="pg-header">	
-										<?php if ($hide_title == 1) { ?>
-										<div class="service-tag"><?php echo get_the_title(); ?></div>
-										<?php } ?>	
-										<?php if ($hide_title != 1) { ?>
-										<h1><?php the_title(); ?></h1>
-										<?php } ?>
-									</header>
-									
-									<div class="main-txt">
-									<?php the_content(); ?>
-									</div>
-									
-									<?php include (STYLESHEETPATH . '/_/inc/team-page/team-list.php'); ?>
-								
-								</div>
-							
-							</div>
-							
-							<?php get_template_part( 'parts/sidebars/sidebar', 'company' ); ?>
-							
-						</div>
-						
-					</article>
-					
-			</main>
-					
-			<?php endwhile; ?>
-			<?php endif; ?>
-
-		</div><!-- CONTENT END -->
+	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+	<?php 
+		$color = get_field('page_colour');
+		$page_icon = get_field('page_icon');
+		$sections_active = get_field('sections_active');
+		$banner_active = get_field('banner_active');	
+		$quick_links = array();
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+		$team_args = array (
+		'posts_per_page'   => -1,
+		'orderby'          => 'menu_order',
+		'order'            => 'ASC',
+		'post_type'        => 'tlw_team_cpt',
+		);
+		
+		$profiles = get_posts($team_args);
+		
+		if ( has_post_thumbnail() ) {
+		$img_post = get_the_ID();
+		}
+	?>	
+	
+	<!-- MAIN CONTENT START -->
+	<main>
+		
+		<!-- BANNER SECTION -->
+		<?php if ($banner_active) { 
+		$banner_type = get_field('banner_type');	
+			if ($banner_type == "video") {
+				$banner_type = "img";
+			}	
+		?>
+		
+			<?php if ($banner_type == 'slider') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/testimonial-slider.inc'); ?>			
+			<?php } ?>
+			
+			<?php if ($banner_type == 'slim-img') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
+			<?php } ?>	
+			
+			<?php if ($banner_type == "img") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
+			<?php } ?>	
+			
+		<?php } ?>		
+				
+		<!-- MAIN TEXT SECTION -->
+		<?php include (STYLESHEETPATH . '/_/inc/sections/main-content-section.inc'); ?>
+		
+		<?php if (!empty($profiles)) { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/team-page/team-list-section.inc'); ?>		
+		<?php } ?>
+		
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+			
+				<?php if ($section['acf_fc_layout'] == 'feedback-section') { ?>
+				<!-- FEEDBACK SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'blog-posts') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'downloads-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'toolkit-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc'); ?>		
+				<?php } ?>
+	
+			<?php } ?>
+		
+		<?php } ?>
+				
+	</main>	
+	<?php endwhile; ?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -5,23 +5,21 @@ update_option('siteurl','http://tlwsolicitors.dev');
 update_option('home','http://tlwsolicitors.dev');
 */
 
-if ( !function_exists(core_mods) ) {
-	function core_mods() {
-		if ( !is_admin() ) {
-			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
-			wp_register_script( 'jquery-cookie', get_stylesheet_directory_uri() . '/_/js/jquery.cookie.js', array('jquery'), '1.0.0', true );
-			wp_register_script( 'slim-scroll', get_stylesheet_directory_uri() . '/_/js/jquery.slimscroll.min.js', array('jquery'), '1.0.0', true );
-			wp_register_script( 'bootstrap-select', 'http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js', array('jquery', 'bootstrap-all-min'), '1.0.0', true );
-			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll'), '1.0.1', true );
-			wp_enqueue_style('styles');
-			wp_enqueue_script('jquery-cookie');
-			wp_enqueue_script('slim-scroll');
-			wp_enqueue_script('bootstrap-select');
-			wp_enqueue_script('functions');
-		}
-	}
-	core_mods();
+add_action( 'after_setup_theme', 'editor_styles' );
+
+function tlw_scripts() {
+	// Load stylesheets.
+	wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
+	
+	// Load JS
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery-ui-core' );
+	wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
+	wp_enqueue_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
+	wp_enqueue_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'bootstrap-select'), filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
 }
+add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
 
 function ewp_remove_script_version( $src ){
 	return remove_query_arg( 'ver', $src );
@@ -92,6 +90,19 @@ $custom_header_args = array(
 );
 add_theme_support( 'custom-header', $custom_header_args );
 
+/* POST THUMBNAIL FUNCTIONS */
+
+function add_toolkit_banner_img( $post ) {	
+		
+	$post_thumbnail_id = get_post_thumbnail_id( $post );
+	$banner_feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
+	
+	echo $banner_feat_img[0];
+	
+	//echo '<pre>';print_r( $wide_banner_img[0] );echo '</pre>';
+	
+}
+
 function add_feat_img ( $post ) {	
 	
 	if (has_post_thumbnail($post->ID)) {
@@ -143,6 +154,17 @@ function add_banner_feat_img( $post ) {
 	$wide_banner_img = wp_get_attachment_image_src($post_thumbnail_id, 'wide-banner-img' );
 	
 	echo $wide_banner_img[0];
+	
+	//echo '<pre>';print_r( $wide_banner_img[0] );echo '</pre>';
+	
+}
+
+function add_full_page_banner_img( $post ) {	
+		
+	$post_thumbnail_id = get_post_thumbnail_id( $post );
+	$banner_feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
+	
+	echo $banner_feat_img[0];
 	
 	//echo '<pre>';print_r( $wide_banner_img[0] );echo '</pre>';
 	
@@ -203,9 +225,6 @@ include (STYLESHEETPATH . '/_/functions/afc_save_post.php');
 
 /* SEND NEWSLETTER TO DOTMAILER */
 include (STYLESHEETPATH . '/_/functions/submit_newsletter.php');
-
-/* NEXT PREVIOUS ADMIN POST/PAGES LINKS FUNCTION */
-//include (STYLESHEETPATH . '/_/functions/next-prev-post-admin.php');
 
 function add_gf_cap() {	
    $id = 2;

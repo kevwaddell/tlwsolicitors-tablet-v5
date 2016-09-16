@@ -1,0 +1,407 @@
+// TOOLKIT BANNER STYLES
+.toolkit-banner {
+	//.min-h(80);
+	.pad-bot(3);
+	.bg-repeat(no-repeat);
+	background-position: center center;
+	.bg-size;
+	.rel;
+	
+	
+	.tk-title-strip {
+	.rel;
+	width: 100%;
+	.caps;
+	.col(white);
+	.line-h(5);
+	.font-size(2.5);
+	.font-slab-serif;	
+	z-index: 1;
+		
+		&.col-red {
+		.trans-bg(@red; 0.5);	
+		}
+		&.col-purple {
+		.trans-bg(@purple; 0.5);	
+		}
+		&.col-green {
+		.trans-bg(@green; 0.5);	
+		}
+		&.col-pink {
+		.trans-bg(@pink; 0.5);	
+		}
+		&.col-orange {
+		.trans-bg(@orange; 0.5);	
+		}
+		&.col-blue {
+		.trans-bg(@blue; 0.5);	
+		}
+	}
+	
+	.tk-banner-txt {
+	.rel;
+	width: 100%;
+	.pad-top(2);
+	//.top(7);
+	z-index: 2;
+		h1 {
+			text-align: center;
+			.caps;
+			.col(white);
+			.font-slab-serif;
+			.font-size(6.5);
+			.line-h(5.5);
+			.mag-bot(1);
+		}	
+		p.lead {
+		.bold;
+		text-align: center; 
+		.col(white);
+		.font-size(2);	
+		.line-h(3);
+		.font-slab-serif;
+		.mag-bot(0);
+		}
+	}
+	
+	.tk-banner-panels {
+	.pad-top(3);
+			@media screen and (orientation: landscape) {
+			.pad-top(4.5);	
+			.over-hide;
+			}
+	}
+	
+	.tk-banner-panel {
+	.rel;
+	margin-left: auto;
+	margin-right: auto;
+	.mag-bot(1);
+	.pad(1.5; 1.5; 1.5; 11);
+	//.border(white; 0.4);
+	.rounded(15px);	
+	.bg-col(@wht);
+	.drop-shadow(0, 3px, 20px, 0.7);
+	width: 80%;
+	
+		@media screen and (orientation: landscape) {
+		.pad-left(1.5);
+		.min-h(26.5);	
+		.pad-all(1.5);
+		width: auto;
+		text-align: center;
+		}
+				
+		i.txt-icon {
+		.abs;
+		.left(1.5);
+		.top(1.5);
+		.w(8);
+		.h(8);
+		.line-h(7.2);
+		.border(white; 0.4);
+		.rounded(100%);
+		text-align: center;	
+		.font-size(6);
+		.font-slab-serif;
+		font-style: normal;
+		.bg-col-gray;
+		.drop-shadow(0, 3px, 20px, 0.7);
+			@media screen and (orientation: landscape) {
+			.rel;
+			.block;	
+			left: auto;
+			top: auto;
+			margin: -40px auto 10px;
+			}
+		}
+		
+		h2 {
+		.font-cond;	
+		.caps;
+		.font-size(2);
+		.line-h(2);
+		.mag-bot(1);
+		.col(@grayLt);
+			br {
+			.none;	
+			}
+			@media screen and (orientation: landscape) {
+				br {
+				.block;	
+				}
+			}
+		}
+		
+		p {
+		.txt-col-grayDk;	
+		}
+		
+		&.col-purple {
+			i {
+			.bg-col-purple-dk;
+			.txt-col-purple-lt;	
+			}
+			
+			h2 {
+			.txt-col-purple-dk;
+			}
+		}
+		
+		&.col-orange {
+			i {
+			.bg-col-orange-dk;
+			.txt-col-orange-lt;	
+			}
+			
+			h2 {
+			.txt-col-orange-dk;
+			}
+		}
+		
+		&.col-blue {
+			i {
+			.bg-col-blue-dk;
+			.txt-col-blue-lt;	
+			}
+			
+			h2 {
+			.txt-col-blue-dk;
+			}
+		}
+	}
+	
+	.top-drk-grad {
+	.abs;
+	.left(0);
+	.top(0);		
+	width: 100%;
+	height: 50%;
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#00333333',GradientType=0 ); /* IE6-9 */
+	.opacity(0.7);
+	z-index: 0;
+	//.none;
+	}
+	
+	.bg-lines {
+	width: 100%;
+	height: 100%;
+	.abs;
+	.left(0);
+	.top(0);	
+	.opacity(0.7);
+	z-index: 0;
+	.inner-shadow(0, 0, 20px, 0.5);
+		&.col-purple {
+		.bg-col-purple;	
+		}
+		
+		&.col-blue {
+		.bg-col-blue;	
+		}
+	}
+	
+	
+}
+
+// TOOLKIT SLIDER STYLES
+.toolkit-txt-section {
+.border-top(white; 0.4);
+z-index: 2;
+.rel;	
+	
+	.tk-txt {
+		.txt {
+		.pad-bot(3);
+		}
+		
+		h2.banner-header {
+		.col(white);	
+		.font-size(2.3);
+		.line-h(5);
+		.mag-bot(4);
+		.mag-top(0);
+		.rel;
+			br {
+			.none;	
+			}
+			
+			i.tk-icon {
+			.abs;
+			.left(0);
+			.top(0);
+			height: 100%;
+			.w(5);
+			.bg-repeat(no-repeat);
+			background-position: center center;
+			.bg-size;	
+			}
+		}
+		
+		h3 {
+		.font-size(4);
+		.line-h(4.5);	
+		.mag-bot(3);
+		.mag-top(0);
+		}
+		
+		p, ul, ol {
+		.font-size(2);
+		.line-h(3);		
+		}
+		
+		//Unordered list
+		ul {
+		list-style: none;
+		.pad-left(2);
+		.mag-bot(2);
+			
+			li {
+			.pad-left(2);
+			.rel;
+			}
+			li:before {
+			.abs;
+			.left(0);
+			content: "\00BB";
+			.col(@gray);
+			.bold;		
+			.mag-right(1);
+			}
+			
+		}
+		
+		//Ordered list
+		ol {
+		list-style: none;
+		.pad-left(2);
+		.mag-bot(2);
+		list-style-position: inside;
+		counter-reset: item;
+			li {
+			//counter-increment: list-counter;
+			//.pad-left(2);
+			.rel;
+				&:before {
+				content: counters(item, ".") " - ";
+				counter-increment: item;
+				.col(@gray);
+				.bold;
+				}
+			}
+		}
+		
+		.tk-img {
+		.rel;
+		.h(20);
+		.mag-bot(2);
+		width: 50%;
+		.fright;	
+		.mag-left(2);
+		}
+		
+		figure.tk-slide-img {
+		width: 100%;
+		height: 100%;
+		.bg-repeat(no-repeat);
+		background-position: center center;
+		.bg-size;
+		.rounded(12px);	
+		.inner-shadow(0, 0, 20px, 0.5);
+		.rel;
+		-webkit-filter: grayscale(80%);
+		filter: grayscale(80%);
+		filter: url('/wp-content/themes/tlwsolicitors-v4/_/css/desaturate.svg#greyscale');	
+			&:after {
+			content: "";
+			.abs;
+			.top(0);
+			.left(0);	
+			width: 100%;
+			height: 100%;
+			.rounded(12px);	
+			.bg-img("thin-stripe-wht.png");	
+			.opacity(@opacity: 0.3);
+			}
+		}
+		
+		.overlay {
+		.abs;
+		.top(0);
+		.left(0);
+		width: 100%;
+		height: 100%;
+		.rounded(12px);	
+		}
+
+	}
+	
+	.tk-txt-purple {
+	//.border-top(@purple-dk, 1);	
+		.overlay {
+		.trans-bg(@purple; 0.5);
+		}
+		
+		a.col-link {
+		.txt-col-purple;
+			&:hover, &:active, &:focus {
+			.txt-col-purple-dk;
+			}	
+		}
+	}
+	
+	.tk-txt-green {
+	//.border-top(@green-dk, 1);	
+		.overlay {
+		.trans-bg(@green; 0.5);
+		}
+		a.col-link {
+		.txt-col-green;
+			&:hover, &:active, &:focus {
+			.txt-col-green-dk;
+			}	
+		}
+	}
+	
+	.tk-txt-pink {
+	//.border-top(@pink-dk, 1);	
+		.overlay {
+		.trans-bg(@pink; 0.5);	
+		}
+		a.col-link {
+		.txt-col-pink;
+			&:hover, &:active, &:focus {
+			.txt-col-pink-dk;
+			}	
+		}
+	}
+	
+	.tk-txt-orange {
+	//.border-top(@orange-dk, 1);	
+		.overlay {
+		.trans-bg(@orange; 0.5);
+		}
+		a.col-link {
+		.txt-col-orange;
+			&:hover, &:active, &:focus {
+			.txt-col-orange-dk;
+			}	
+		}
+	}
+	
+	.tk-txt-blue {
+	//.border-top(@blue-dk, 1);	
+		.overlay {
+		.trans-bg(@blue; 0.5);	
+		}
+		a.col-link {
+		.txt-col-blue;
+			&:hover, &:active, &:focus {
+			.txt-col-blue-dk;
+			}	
+		}
+	}
+}
