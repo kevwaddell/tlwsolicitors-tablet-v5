@@ -6660,9 +6660,6 @@ p.intro {
   font-weight: bold;
   color: #656565;
 }
-p:last-child {
-  margin-bottom: 0px;
-}
 p.intro.lrg {
   font-weight: normal;
   padding-bottom: 50px;
