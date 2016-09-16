@@ -57,7 +57,8 @@ min-height: 100%;
 
 	.lp-header {
 	text-align: center;
-	.border-bot(white; 0.4);
+	.mag-bot(2);
+	.pad-top(8);
 		
 		h1 {
 		.font-slab-serif;
@@ -71,6 +72,30 @@ min-height: 100%;
 		.col(white);
 		.h(4.4);
 		}	
+		
+		&.bg-col-purple {
+		.trans-bg(@purple; 0.8);
+		}
+		
+		&.bg-col-green {
+		.trans-bg(@green; 0.8);
+		}
+		
+		&.bg-col-pink {
+		.trans-bg(@pink; 0.8);
+		}
+		
+		&.bg-col-orange {
+		.trans-bg(@orange; 0.8);
+		}
+		
+		&.bg-col-blue {
+		.trans-bg(@blue; 0.8);
+		}
+		
+		&.bg-col-red {
+		.trans-bg(@red; 0.8);
+		}
 	}
 
 	
@@ -107,7 +132,7 @@ min-height: 100%;
 	.left(0);
 	.top(0);
 	.bottom(11);
-	.pad-top(11);
+	//.pad-top(8);
 	.pad-bot(4);
 	width: 100%;
 	overflow: scroll;	

@@ -13,7 +13,11 @@ $all_forms_active = get_field('all_forms_active', 'option');
 <!-- MAIN CONTENT START -->
 	
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		 	
+	<div class="lp-header bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<div class="container">
+			<h1 class="text-center"><?php the_title(); ?></h1>
+		</div>
+	</div>	 	
  	<article <?php post_class(); ?>>
 		<div class="container-fluid">	
 			
@@ -22,10 +26,6 @@ $all_forms_active = get_field('all_forms_active', 'option');
 			 	<div class="col-md-10 col-md-offset-1">
 						
 				 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-					 	
-					 	<?php if ($hide_title != 1) { ?>
-						<h2><?php the_title(); ?></h2>
-						<?php } ?>
 						
 						<div class="main-txt">
 						<?php the_content(); ?>

@@ -11,6 +11,8 @@ Template Name: Thank page template
 		<main>	
 		<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
+		<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-thankyou.inc'); ?>
+		
 		<?php 
 		if (isset($_GET['return-page'])) {
 		$return_id = $_GET['return-page'];
@@ -21,8 +23,6 @@ Template Name: Thank page template
 		
 				
 			<article <?php post_class("content-section"); ?>>
-				
-				<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
 	
 				<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
 				
