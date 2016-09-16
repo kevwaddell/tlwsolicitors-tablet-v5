@@ -8215,6 +8215,9 @@ body#landing-page .lp-form .gform_page_footer input.gform_button {
 .toolkit-banner .tk-banner-panel p {
   color: #4b4b4b;
 }
+.toolkit-banner .tk-banner-panel p:last-child {
+  margin-bottom: 0px;
+}
 .toolkit-banner .tk-banner-panel.col-purple i {
   background-color: #6C4480;
   color: #d1b9d8;
