@@ -6,10 +6,12 @@ Template Name: Sitemap page
 
 <?php get_header(); ?>
 
+<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+
 <!-- MAIN CONTENT START -->
 <main>
-
-<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 	<article <?php post_class("content-section"); ?>>
 		<div class="container">
@@ -46,10 +48,11 @@ Template Name: Sitemap page
 			</div>
 		</div>
 	</article>
-	
-	<?php endwhile; ?>
-	<?php endif; ?>
+
 
  </main>
+		
+<?php endwhile; ?>
+<?php endif; ?>
 	
 <?php get_footer(); ?>

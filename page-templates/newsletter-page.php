@@ -14,6 +14,7 @@ Template Name: Newsletter sign up template
 			 ?>	
 			 <main class="page-col-red">
 				 	
+				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 				
 				<?php if (has_post_thumbnail()) { ?>
 				<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			

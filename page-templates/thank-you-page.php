@@ -9,6 +9,8 @@ Template Name: Thank page template
 
 		<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 		<main>	
+		<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
+		
 		<?php 
 		if (isset($_GET['return-page'])) {
 		$return_id = $_GET['return-page'];
