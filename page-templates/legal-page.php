@@ -9,7 +9,6 @@ Template Name: Legal pages template
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
 	$color = get_field('page_colour');
-	$quick_links = array();
 	
 	$children_args = array(
 		'sort_column' => 'menu_order',

@@ -8,8 +8,6 @@ $col_bg = $section['section_bg_col_active'];
 if (empty($section_title)) {
 $section_title = $form->title;
 }
-
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
 ?>
 <?php if ($form_active && $all_forms_active) { ?>
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-header<?php echo (!empty($col_bg) && !empty($color)) ? ' bg-col-'.$color : ''; ?>">

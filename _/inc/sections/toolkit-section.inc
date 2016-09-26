@@ -11,7 +11,6 @@ $color = get_field('page_colour', $toolkit_page);
 $toolkit_content = apply_filters('the_content', $pg->post_content );
 $section_title = "TLW Toolkit";	
 //echo '<pre class="debug">';print_r($toolkit_page_parent);echo '</pre>';
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-links'];	
 $page_icon = get_field('page_icon', $pg->ID);
 
 $post_thumbnail_id = get_post_thumbnail_id( $pg->ID );

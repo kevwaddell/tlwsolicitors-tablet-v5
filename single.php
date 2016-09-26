@@ -7,8 +7,6 @@
 			$all_forms_active = get_field('all_forms_active', 'option');
 			$form_active = get_field('add_form');	
 			$related_posts_active = get_field('related_posts_active');
-			
-			$quick_links = array();
 			?>	
 			<!-- MAIN CONTENT START -->
 			

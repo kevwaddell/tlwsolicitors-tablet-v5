@@ -5,7 +5,6 @@
 	<?php 
 	$hp_sections = get_field('hp_sections', 'option');
 	$banner_active = get_field('hp_top_banner_active', 'option');	
-	$quick_links = array();
 	?>
 	<!-- MAIN CONTENT START -->
 	<main>

@@ -5,7 +5,6 @@ $col_bg = get_field('form_section_bg_col_active');
 if (empty($section_title)) {
 $section_title = $form->title;
 }
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
 ?>
 <section id="form-section" class="pg-section with-header with-icon-logo bg-col-red">
 <a name="request-a-callback" id="request-a-callback" class="section-target"></a>

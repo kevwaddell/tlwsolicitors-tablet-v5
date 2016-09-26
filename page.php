@@ -4,19 +4,11 @@
 	<?php 
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
-		$how_it_works_active = get_field('hiw_active');
-		$active_sections = get_field('active_sections');
-		$banner_active = false;	
-		$quick_links = array();
+		$sections_active = get_field('sections_active');
+		$banner_active = get_field('banner_active');
 		
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();
-		}
-		
-		if ($active_sections && in_array("Page banner", $active_sections)) {
-		$banner_active = true;	
-		$banner_bg = get_field('banner_bg');
-		$banner_quick_links = array();
 		}
 	?>	
 	

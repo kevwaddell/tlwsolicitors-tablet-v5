@@ -12,7 +12,6 @@ Template Name: Service Home page
 		$page_icon = get_field('page_icon');
 		$sections_active = get_field('sections_active');
 		$banner_active = get_field('banner_active');	
-		$quick_links = array();
 		
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();

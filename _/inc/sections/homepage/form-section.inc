@@ -11,8 +11,6 @@ if (empty($section_title)) {
 $section_title = $form->title;
 }
 
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
-
 ?>
 
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-header">

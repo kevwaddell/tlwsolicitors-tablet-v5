@@ -14,7 +14,6 @@ Template Name: Toolkit page
 		$banner_active = get_field('banner_active');
 		$slides_active = get_field('tk_slides_active');
 		$sections_active = get_field('sections_active');
-		$quick_links = array();
 
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();

@@ -23,8 +23,6 @@ $location = get_field('location', $feedback_id);
 $gender = get_field('gender', $feedback_id);
 
 //echo '<pre class="debug">';print_r($gender);echo '</pre>';
-
-$quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
 ?>
 <section id="feedback-section" class="pg-section feedback-single">
 <a name="feedback" id="feedback" class="section-target"></a>

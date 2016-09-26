@@ -11,7 +11,6 @@ $more_btn_text = $post_content['more_text'];
 $more_btn_text = "Continue Reading";	
 }
 $section_title = "Article text";
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'article-txt'];	
 ?>
 <article <?php post_class("content-section"); ?>>
 	<a name="article-txt" id="article-txt" class="section-target"></a>

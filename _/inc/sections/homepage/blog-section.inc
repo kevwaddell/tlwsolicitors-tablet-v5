@@ -45,8 +45,6 @@ $archives_args = array(
 );
 	
 $archives = wp_get_archives($archives_args);
-
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-articles'];	
 ?>
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>

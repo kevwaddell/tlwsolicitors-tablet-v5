@@ -9,8 +9,6 @@ if (!empty($exclude_quotes)) {
 $feedback_args['exclude'] = $exclude_quotes;
 }
 $feedback_quotes = get_posts($feedback_args); 
-
-$quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];
 			
 if ($feedback_quotes) { ?>
 

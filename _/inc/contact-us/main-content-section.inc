@@ -2,7 +2,6 @@
 global $hide_title;
 global $post;
 $section_title = "Contact information";	
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'info-txt'];
 $post_content = get_extended( $post->post_content );
 $content_main = apply_filters('the_content', $post_content['main'] );
 $content_extended = apply_filters('the_content', $post_content['extended'] );

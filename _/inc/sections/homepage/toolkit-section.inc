@@ -13,7 +13,6 @@ $toolkit_title = "Toolkit";
 }
 
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
-$quick_links[] = ['link_title' => "TLW ".$section_title, 'link_anchor' => 'toolkit-links'];	
 ?>
 <section id="toolkit-section" class="pg-section links-2">
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>

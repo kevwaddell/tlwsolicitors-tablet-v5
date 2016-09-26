@@ -1,6 +1,5 @@
 <?php 
 $section_title = "Our Team";	
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'our-team'];	
 $profiles_total = count($profiles);
 //echo '<pre class="debug">';print_r($profiles);echo '</pre>';
 ?>

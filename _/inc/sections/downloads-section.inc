@@ -6,7 +6,6 @@ $downloads_active = $section['downloads_active'];
 <?php 
 $section_title = $section['section_title'];	
 $download_section_files = $section['download_section_files'];
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'downloads'];	
 ?>
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-icon-logo bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 <a name="downloads" id="downloads" class="section-target"></a>

@@ -12,7 +12,6 @@ Template Name: Team Profiles Page
 		$page_icon = get_field('page_icon');
 		$sections_active = get_field('sections_active');
 		$banner_active = get_field('banner_active');	
-		$quick_links = array();
 		
 		$team_args = array (
 		'posts_per_page'   => -1,

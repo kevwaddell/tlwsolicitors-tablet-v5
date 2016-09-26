@@ -19,8 +19,6 @@ $archives_args = array(
 );
 	
 $archives = wp_get_archives($archives_args);
-
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'related-articles'];	
 ?>
 <section id="blog-posts" class="pg-section sub-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	<div class="overlay"></div>
