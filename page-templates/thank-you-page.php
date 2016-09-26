@@ -26,7 +26,7 @@ Template Name: Thank page template
 	
 				<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>
 				
-				<div class="container">
+				<div class="container-fluid">
 					
 					<div class="entry wide-entry">
 						

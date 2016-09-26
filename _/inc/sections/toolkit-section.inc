@@ -25,7 +25,7 @@ $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 		<div class="img-overlay"></div>
 	</div>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo get_the_title($toolkit_page); ?> <?php echo get_the_title($pg->ID); ?></h2>
 		<?php echo $toolkit_content; ?>
 	</div>	

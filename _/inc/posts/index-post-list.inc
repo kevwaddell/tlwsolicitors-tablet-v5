@@ -6,7 +6,7 @@
 		$post_counter = 0;
 		?>
 		<div class="page-links">
-			<div class="container">	
+			<div class="container-fluid">	
 			<?php wp_pagenavi(); ?>
 			</div>
 		</div>	
@@ -16,7 +16,7 @@
 			<article <?php post_class("col-".$cols[$post_counter]); ?> style="background-image: url(<?php add_full_page_banner_img(get_the_id());?>)">
 			<div class="overlay"></div>
 			<div class="stripes-overlay"></div>
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
 							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php echo $date; ?></time>
@@ -31,7 +31,7 @@
 		<?php endwhile; ?>
 		
 		<div class="page-links">
-			<div class="container">	
+			<div class="container-fluid">	
 			<?php wp_pagenavi(); ?>
 			</div>
 		</div>					

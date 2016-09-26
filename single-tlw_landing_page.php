@@ -14,7 +14,7 @@ $all_forms_active = get_field('all_forms_active', 'option');
 	
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	<div class="lp-header bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<div class="container">
+		<div class="container-fluid">
 			<h1 class="text-center"><?php the_title(); ?></h1>
 		</div>
 	</div>	 	

@@ -16,7 +16,7 @@ $section_title = "Toolkit";
 			<i class="tk-icon" style="background-image: url(<?php echo $txt['slide_icon']; ?>)"></i>
 			<?php echo $txt['slide_title']; ?>
 		</h2>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="tk-img">

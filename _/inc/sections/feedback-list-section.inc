@@ -26,7 +26,7 @@ if ($feedback_quotes) { ?>
 		
 		<div class="item bg-col-<?php echo $colors[$k]; ?>">
 		
-			<div class="container feedback-quote">
+			<div class="container-fluid feedback-quote">
 				<div class="row">
 					<div class="col-xs-2 text-left">
 						<i class="fa fa-quote-left quote-icon"></i>

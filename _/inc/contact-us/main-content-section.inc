@@ -17,7 +17,7 @@ $more_btn_text = "Continue Reading";
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>	
 	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			
 			<div class="col-md-10 col-md-offset-1">

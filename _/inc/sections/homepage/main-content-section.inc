@@ -14,7 +14,7 @@ $section_title = "TLW introduction";
 					
 	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
 	
-	<div class="container">
+	<div class="container-fluid">
 		
 		<div class="row">
 			

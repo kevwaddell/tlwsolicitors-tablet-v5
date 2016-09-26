@@ -28,7 +28,7 @@ $gender = get_field('gender', $feedback_id);
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="item bg-col-<?php echo (!empty($feedback_color)) ? $feedback_color : 'red'; ?>">
 		
-		<div class="container feedback-quote">
+		<div class="container-fluid feedback-quote">
 			<div class="row">
 				<div class="col-xs-2 text-left">
 					<i class="fa fa-quote-left quote-icon"></i>

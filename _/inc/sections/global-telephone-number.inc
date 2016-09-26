@@ -3,7 +3,7 @@ $freephone_num = get_field('freephone_num', 'option');
 ?>
 <?php if (!empty($freephone_num)) { ?>
 <div id="global-tel-num">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<i class="fa fa-phone fa-lg pull-left"></i>
 		

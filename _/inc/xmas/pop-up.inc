@@ -20,7 +20,7 @@ bottom: 110px;
 
 <div id="xmas-popup-btn-wrap" class="pop-up-inactive">
 	<div  class="wrap-inner">
-		<div class="container">
+		<div class="container-fluid">
 			<p><?php echo bloginfo('name'); ?> opening hours for the Christmas period <button id="xmas-popup-btn-open" class="btn btn-default">View times <i class="fa fa-arrow-circle-up"></i></button></p>
 		</div>
 	</div>

@@ -17,7 +17,7 @@ $section_title = $form->title;
 	<div class="overlay"></div>			
 	<?php } ?>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

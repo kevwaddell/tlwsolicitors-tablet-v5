@@ -17,7 +17,7 @@ $toolkit_title = "Toolkit";
 <section id="toolkit-section" class="pg-section links-2">
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="text-center section-header bg-col-grayDk">TLW <?php echo $section_title; ?></h2>
 		<div class="tk-pg-intro font-slab-serif"><?php echo $section_intro; ?></div>
 	</div>	

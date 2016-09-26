@@ -12,7 +12,7 @@ if (!empty($slider_testimonials)) { ?>
 	}	
 	?>
 	<header class="banner-title text-center bold">
-		<div class="container">
+		<div class="container-fluid">
 			<?php echo get_the_title($title_id); ?>
 		</div>
 	</header>			

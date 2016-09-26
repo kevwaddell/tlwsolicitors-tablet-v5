@@ -1,13 +1,13 @@
 <section class="toolkit-banner" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>)">
 				
 	<div class="tk-title-strip col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<div class="container text-center">
+		<div class="container-fluid text-center">
 			<?php echo get_the_title($post->post_parent); ?>
 		</div>
 	</div>
 	
 	<div class="tk-banner-txt">
-		<div class="container">
+		<div class="container-fluid">
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 		</div>

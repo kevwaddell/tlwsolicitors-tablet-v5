@@ -7080,7 +7080,7 @@ section.social-feed span.date {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
   filter: alpha(opacity=50);
 }
-.post-grid article.post .container {
+.post-grid article.post .container-fluid {
   z-index: 2;
   position: relative;
 }
@@ -9427,7 +9427,7 @@ section.contact-links .contact-info a.contact-info-link:focus i {
 article.content-section {
   border-top: 4px solid white;
 }
-article.content-section .container {
+article.content-section .container-fluid {
   padding-top: 30px;
   padding-bottom: 40px;
 }
@@ -9833,8 +9833,14 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 }
 .pg-section#form-section {
   border-top: 4px solid white;
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #E9E9E9));
+  background: -ms-linear-gradient(bottom, white, #E9E9E9);
+  background: -moz-linear-gradient(center bottom, white 0%, #E9E9E9 100%);
+  background: -o-linear-gradient(#E9E9E9, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9E9E9', endColorstr='white', GradientType=0);
 }
-.pg-section#form-section .container {
+.pg-section#form-section .container-fluid {
   position: relative;
   z-index: 2;
 }
@@ -10348,7 +10354,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 .pg-section#toolkit-section h2 {
   margin-bottom: 0px;
 }
-.pg-section#toolkit-section .container {
+.pg-section#toolkit-section .container-fluid {
   position: relative;
   z-index: 2;
 }
@@ -11236,7 +11242,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   position: relative;
   background-color: #4b4b4b;
 }
-#global-tel-num .container {
+#global-tel-num .container-fluid {
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -12690,6 +12696,16 @@ form.route-finder input.btn:focus {
 #form-section .gform_wrapper label {
   font-size: 16px;
 }
+#form-section .radio_marketing,
+#form-section .radio_updates {
+  padding-top: 20px;
+  border-top: 1px solid #918F8F;
+}
+#form-section .radio_marketing .gfield_label,
+#form-section .radio_updates .gfield_label {
+  font-size: 20px;
+  font-weight: bold !important;
+}
 #form-section .gform_wrapper label,
 #form-section .gform_wrapper .gfield_no_follows_desc {
   color: #4b4b4b;
@@ -12711,6 +12727,9 @@ form.route-finder input.btn:focus {
   border: none;
   padding: 0px;
   margin: 0px;
+}
+#form-section .gform_wrapper .gform_body {
+  width: 100%;
 }
 #form-section .gform_wrapper .gform_body:before,
 #form-section .gform_wrapper .gform_body:after {

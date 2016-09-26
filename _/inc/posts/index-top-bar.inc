@@ -1,5 +1,5 @@
 <div class="posts-top-bar">
-	<div class="container">
+	<div class="container-fluid">
 	
 		<div class="tb-links">
 			<div class="row">

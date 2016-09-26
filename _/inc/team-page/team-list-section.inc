@@ -6,7 +6,7 @@ $profiles_total = count($profiles);
 <section id="our-team-section" class="pg-section bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	<a name="our-team" id="our-team" class="section-target"></a>
 	<div class="overlay"></div>
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	</div>
 	

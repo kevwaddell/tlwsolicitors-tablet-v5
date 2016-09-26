@@ -16,7 +16,7 @@ Template Name: Sitemap page
 	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 	<article <?php post_class("content-section"); ?>>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 						

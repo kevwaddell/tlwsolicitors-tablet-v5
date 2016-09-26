@@ -22,7 +22,7 @@ $archives = wp_get_archives($archives_args);
 ?>
 <section id="blog-posts" class="pg-section sub-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	<div class="overlay"></div>
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	</div>
 	
@@ -33,7 +33,7 @@ $archives = wp_get_archives($archives_args);
 			$date = get_the_date('F jS Y', $ID);
 			?>
 			<div class="item<?php echo ($k === 0) ? " active":""; ?>">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="recent-post">
@@ -49,7 +49,7 @@ $archives = wp_get_archives($archives_args);
 		</div>
 	</div>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="row blog-dropdowns">

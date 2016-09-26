@@ -8,7 +8,7 @@ $form_title = get_field('form_section_title');
 //echo '<pre class="debug">';print_r($img);echo '</pre>';
 ?>
 <section class="contact-links" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="intro">
 			<p class="header text-center">We can help 24/7 365 days a year</p>
 			<p class="text-center">You can contact us using any of the following methods.</p>

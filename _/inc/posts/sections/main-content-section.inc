@@ -19,7 +19,7 @@ $section_title = "Article text";
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>	
 	
-	<div class="container">
+	<div class="container-fluid">
 
 			
 		<div class="row">

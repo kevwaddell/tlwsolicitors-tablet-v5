@@ -49,7 +49,7 @@ $archives = wp_get_archives($archives_args);
 <section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 		<div class="overlay"></div>
-		<div class="container">
+		<div class="container-fluid">
 			<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		</div>	
 		<div id="posts-list-carousel" class="posts-list carousel slide" data-ride="carousel">
@@ -59,7 +59,7 @@ $archives = wp_get_archives($archives_args);
 			$date = get_the_date('F jS Y', $ID);
 			?>
 			<div class="item<?php echo ($k === 0) ? " active":""; ?>">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="recent-post">
@@ -75,7 +75,7 @@ $archives = wp_get_archives($archives_args);
 			</div>
 		</div>
 			
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row blog-dropdowns">

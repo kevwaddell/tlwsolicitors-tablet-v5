@@ -19,7 +19,7 @@ $testimonials = $section['testimonials'];
 		$col = $quote['color'];
 		?>
 			<div class="item bg-col-<?php echo $col; ?><?php echo ($k == 0) ? " active":""; ?>">
-				<div class="container feedback-quote">
+				<div class="container-fluid feedback-quote">
 					<div class="row">
 						<div class="col-xs-2 text-left">
 							<i class="fa fa-quote-left quote-icon"></i>
