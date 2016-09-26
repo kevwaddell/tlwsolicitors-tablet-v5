@@ -14,6 +14,7 @@
 				</div>
 			</div>
 			
+<!--
 			<div class="item google-plus">
 				<div class="container">
 					<div class="row">
@@ -26,6 +27,7 @@
 					</div>
 				</div>
 			</div>
+-->
 			<div class="item facebook">
 				<div class="container">
 					<div class="row">
