@@ -8,7 +8,9 @@
 	//echo '<pre>';print_r($posts);echo '</pre>';
 	?>
 	<main class="page-col-red">
-	 
+	 		
+	 		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>
+	 		
 			<article class="page">
 				<h1 class="text-center" style="margin-top: 20px;">Search Results</h1>
 				<p class="intro text-center">You Searched for: "<?php the_search_query(); ?>"<br> Results: <?php echo $search_count; ?></p>

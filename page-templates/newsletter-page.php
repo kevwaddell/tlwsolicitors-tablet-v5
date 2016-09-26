@@ -13,6 +13,8 @@ Template Name: Newsletter sign up template
 			$color = get_field('page_colour');
 			 ?>	
 			 <main class="page-col-red">
+				
+				<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 				 	
 				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 				

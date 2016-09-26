@@ -19,7 +19,10 @@ Template Name: Why Choose TLW page template
 	
 	<!-- MAIN CONTENT START -->
 	<main>
-	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
+		
+		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+	
+		<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 		<!-- BANNER SECTION -->
 		<?php if ($banner_active) { 

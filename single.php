@@ -13,6 +13,9 @@
 			<!-- MAIN CONTENT START -->
 			
 			<main class="page-col-red">
+				
+				<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>
+				
 				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 				
 				<?php if (has_post_thumbnail()) { ?>

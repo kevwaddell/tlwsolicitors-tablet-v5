@@ -9,6 +9,9 @@
 	?>
 	<!-- MAIN CONTENT START -->
 	<main>
+		
+		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+		
 		<!-- BANNER SECTION -->
 		<?php if ($banner_active) { 
 		$hp_banner_type = get_field('hp_banner_type', 'option');	

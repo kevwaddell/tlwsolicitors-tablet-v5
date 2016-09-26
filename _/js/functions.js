@@ -266,6 +266,13 @@
 			
 		});
 		
+		$('body').on(event_type,'#awards-pop-up', function(){
+		    
+		    $('button#close-awards-btn').trigger(event_type);
+		
+		});
+
+		
 		/* PAGE BANNER TAG SCROLLER */
 		function startTagInterval() {
 		tagInterval = setInterval(changeTag, 7000);

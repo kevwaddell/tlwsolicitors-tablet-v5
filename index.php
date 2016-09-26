@@ -11,7 +11,9 @@
 		}
 		
 		?>
-	
+		
+		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+		
 		<main class="page-col-red">
 			
 			<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
