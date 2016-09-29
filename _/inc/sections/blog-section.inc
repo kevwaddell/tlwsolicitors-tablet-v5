@@ -14,6 +14,10 @@ $recent_posts_args = array (
 'category__in'	=> $blog_categories
 );
 
+if ( date("n") >= 4 ) {
+$recent_posts_args['year'] = date("Y");
+}
+
 $recent_posts = get_posts($recent_posts_args);
 
 //echo '<pre class="debug">';print_r($recent_posts);echo '</pre>';
