@@ -1200,58 +1200,86 @@ article.content-section {
 		
 		
 		.download-item {
-		text-align: center;
-			img {
-			.mag-bot(2);	
-			.h(20);
-			width: auto;
-			.bg-col(white);
-			.pad-all(0.4);
-			.rel;
-			}
-			a, span, img {
-			.in-block;	
-			}
-			
+		.h(14);	
+		.mag-bot(2);
+		.rel;
+		
 			a {
-			.col(white);
-			.rel;
+			display: table;
+			vertical-align: middle;
+			text-align: center;
+			width: 100%;
 			.no-text-dec;
 			.over-hide;
-							
-				span {
-				.block;
-				.caps;
-				.font-slab-serif;	
-				.font-size(1.6);
-				.line-h(1.6);
-				.h(3.2);
+			.trans-bg(@wht; 0.7);
+			.col(@grayDk);
+			
+				&:after {
+				content: "\f01a";	
+				font-family: FontAwesome;
+				.h(14);
+				.w(10);
+				.line-h(14);
+				.abs; 
+				.right(0);
+				.top(0);	
+				.font-size(3);
 				}
 				
-				&:hover, &:active, &:focus {
-				.bold;	
-					img {
-					.drop-shadow(0, 3px, 10px, 0.5);
-					.opacity(0.7);
-					}
-
-				}
-				
+				a:active, a:focus {
+				.col(@wht);
+				}	
+			}
+		
+			.cover-img {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			.w(14);
+			}
+			
+			img {
+			.h(12);
+			width: auto;
+			.mag-all(1);
+			}
+			
+			.dwnload-title {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;	
+			width: auto;
+			.caps;
+			.font-size(2.5);
+			.line-h(2.5);
+			.font-slab-serif;
+			.pad-right(14);
+			}
+			
+		}
+			
+		&.bg-col-red {
+		.gradient(@red, @red ,@redMid);
+			
+			a:active, a:focus {
+				.trans-bg(@redMid; 0.7);
+				.col(@wht);
 			}
 		}
 			
 		&.bg-col-purple {
+		.gradient(@purple, @purple ,@purple-dk);
 			
-			a:hover, a:active, a:focus {
-				img {
-				.bg-col-purple-dk;	
-				}
+			a:active, a:focus {
+				.trans-bg(@purple-dk; 0.7);
+				.col(@wht);
 			}
 		}
 		
 		&.bg-col-green {
+		.gradient(@green, @green ,@green-dk);
 			
-			a:hover, a:active, a:focus {
+			a:active, a:focus {
 				img {
 				.bg-col-green-dk;	
 				}
@@ -1259,7 +1287,9 @@ article.content-section {
 		}
 		
 		&.bg-col-pink {	
-			a:hover, a:active, a:focus {
+		.gradient(@pink, @pink ,@pink-dk);
+		
+			a:active, a:focus {
 				img {
 				.bg-col-pink-dk;	
 				}
@@ -1267,7 +1297,9 @@ article.content-section {
 		}
 		
 		&.bg-col-orange {
-			a:hover, a:active, a:focus {
+		.gradient(@orange, @orange ,@orange-dk);
+		
+			a:active, a:focus {
 				img {
 				.bg-col-orange-dk;	
 				}
@@ -1276,7 +1308,9 @@ article.content-section {
 		}
 		
 		&.bg-col-blue {	
-			a:hover, a:active, a:focus {
+		.gradient(@blue, @blue ,@blue-dk);
+		
+			a:active, a:focus {
 				img {
 				.bg-col-blue-dk;	
 				}
