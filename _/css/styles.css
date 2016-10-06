@@ -9429,7 +9429,7 @@ article.content-section {
 }
 article.content-section .container-fluid {
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 article.content-section .service-label {
   font-size: 20px;
@@ -9632,6 +9632,7 @@ article.content-section #content-extra.closed {
 }
 article.content-section #content-extra.open {
   height: auto;
+  padding-bottom: 40px;
 }
 article.content-section #content-extra #content-extra-inner {
   position: relative;
@@ -9640,8 +9641,8 @@ article.content-section #content-extra #close-content-extra-btn {
   padding: 0px;
   border: none;
   position: absolute;
-  bottom: 0px;
-  right: -20px;
+  bottom: -40px;
+  right: 0px;
   width: 30px;
   height: 30px;
   line-height: 28px;
