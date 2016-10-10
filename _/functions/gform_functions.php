@@ -7,6 +7,26 @@ function tgm_io_custom_gforms_spinner( $src ) {
     
 }
 
+add_filter("gform_field_value_src", "populate_affiliate");
+
+function populate_affiliate($value){
+	if ( isset($_COOKIE['src']) ) {
+	return $_COOKIE["src"];	
+	}
+}
+
+add_filter("gform_field_value_gclid", "populate_google_click");
+
+function populate_google_click($value){
+	
+	if ( isset($_GET['gclid'])) {
+	return $_GET['gclid'];		
+	} else if ( isset($_COOKIE['gclid']) ) {
+	return $_COOKIE["gclid"];	
+	}
+}
+
+
 function gform_column_splits($content, $field, $value, $lead_id, $form_id) {
 if(IS_ADMIN) return $content; // only modify HTML on the front end
 
