@@ -29,4 +29,11 @@
 	
 	<?php wp_head(); ?>
 	
+	<?php 
+	if ( isset($_GET['gclid']) ) {
+		session_start(); 
+		$_SESSION['gclid'] = $_GET['gclid'];
+	}
+	?>
+	
 </head>
