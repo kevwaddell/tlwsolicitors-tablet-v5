@@ -10,10 +10,12 @@ $content = apply_filters( 'the_content', $jobs_pg->post_content );
 	}
 ?>
 
-<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
-
 <!-- MAIN CONTENT START -->
 <main class="page-col-red">
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 	
 	<?php if (has_post_thumbnail($jobs_pg->ID)) { ?>
 		<?php include (STYLESHEETPATH . '/_/inc/vacancies/img-banner-slim.inc'); ?>			
