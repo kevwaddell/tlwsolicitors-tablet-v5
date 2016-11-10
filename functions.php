@@ -211,6 +211,9 @@ include (STYLESHEETPATH . '/_/functions/tlw_how_it_works_cpt.php');
 /* REGISTER POSITIONS TAX */
 include (STYLESHEETPATH . '/_/functions/tlw_positions_tax.php');
 
+/* REGISTER Vacancies CPT */
+include (STYLESHEETPATH . '/_/functions/tlw_jobs_cpt.php');
+
 /* TAXONMY ORDERING */
 include (STYLESHEETPATH . '/_/functions/tax_order.php');
 
