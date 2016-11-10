@@ -1,7 +1,24 @@
 (function($){
 	var tagInterval;
 	var event_type = 'touchstart';
-	  
+	
+	function getUrlVars() {
+	    var hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    
+	    for(var i = 0; i < hashes.length; i++)
+	    {
+	        hash = hashes[i].split('=');	        
+	        
+	        if (hash[0] === "gclid" ) { 
+		    $.cookie(hash[0], hash[1], {expires: 1, path: '/'});  
+	        }   
+	        
+	    }
+	}
+	
+	getUrlVars();
+
 	$(document).ready(function (){
 	
 	 $(".selectpicker").selectpicker({
