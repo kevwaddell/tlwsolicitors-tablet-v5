@@ -9901,6 +9901,12 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7A1039', endColorstr='#C60751', GradientType=0);
   border-top: 4px solid white;
 }
+.pg-section#vacancies-section .well {
+  margin-bottom: 45px;
+}
+.pg-section#vacancies-section .well p {
+  margin-bottom: 0px;
+}
 .pg-section#vacancies-section .container-fluid {
   position: relative;
   z-index: 2;
