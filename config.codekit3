@@ -395,7 +395,7 @@
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
-		"ma": 0,
+		"ma": 1,
 		"oA": 1,
 		"oAP": "\/_\/css\/css\/breadcrumbs.css",
 		"oF": 0,
@@ -429,7 +429,7 @@
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
-		"ma": 0,
+		"ma": 1,
 		"oA": 1,
 		"oAP": "\/_\/css\/css\/content.css",
 		"oF": 0,
@@ -684,7 +684,7 @@
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
-		"ma": 0,
+		"ma": 1,
 		"oA": 1,
 		"oAP": "\/_\/css\/css\/sections.css",
 		"oF": 0,
@@ -907,6 +907,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/_\/functions\/tlw_how_it_works_cpt.php",
+		"oF": 0
+		},
+	"\/_\/functions\/tlw_jobs_cpt.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/functions\/tlw_jobs_cpt.php",
 		"oF": 0
 		},
 	"\/_\/functions\/tlw_landing_pages_cpt.php": {
@@ -1307,6 +1313,36 @@
 		"oAP": "\/_\/inc\/toolkit\/toolkit-slides.inc",
 		"oF": 0
 		},
+	"\/_\/inc\/vacancies\/img-banner-slim.inc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/vacancies\/img-banner-slim.inc",
+		"oF": 0
+		},
+	"\/_\/inc\/vacancies\/sections\/main-content-section.inc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/vacancies\/sections\/main-content-section.inc",
+		"oF": 0
+		},
+	"\/_\/inc\/vacancies\/sections\/send-us-cv.inc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/vacancies\/sections\/send-us-cv.inc",
+		"oF": 0
+		},
+	"\/_\/inc\/vacancies\/vacancy-details-panel.inc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/vacancies\/vacancy-details-panel.inc",
+		"oF": 0
+		},
+	"\/_\/inc\/vacancies\/vacancy-post-list.inc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_\/inc\/vacancies\/vacancy-post-list.inc",
+		"oF": 0
+		},
 	"\/_\/inc\/xmas\/pop-up.inc": {
 		"ft": 8192,
 		"oA": 2,
@@ -1339,6 +1375,12 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/archive-tlw_vacancies_cpt.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive-tlw_vacancies_cpt.php",
+		"oF": 0
 		},
 	"\/archive.php": {
 		"ft": 8192,
@@ -1548,6 +1590,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/single-tlw_landing_page.php",
+		"oF": 0
+		},
+	"\/single-tlw_vacancies_cpt.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-tlw_vacancies_cpt.php",
 		"oF": 0
 		},
 	"\/single.php": {
@@ -3332,8 +3380,8 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "",
-		"autoOutputPathReplace2": "",
+		"autoOutputPathReplace1": "kit",
+		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsLESS": {
@@ -3344,7 +3392,7 @@
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"ieCompatibility": 1,
 		"outputStyle": 0,

@@ -6248,6 +6248,7 @@ html.svg header[role="banner"] .logo a {
 /* --------------------------- */
 #breadcrumbs {
   background-color: #E9E9E9;
+  border-bottom: 4px solid white;
 }
 #breadcrumbs .breadcrumb_last {
   font-weight: bold;
@@ -6419,18 +6420,83 @@ time.date-today i {
   line-height: 40px;
   color: #c4c2c2;
 }
+article.page .label,
+article.post .label,
+article.tlw_vacancies_cpt .label,
+article.tlw_landing_page .label {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0px 15px 0px 15px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+article.page .vacancy-details,
+article.post .vacancy-details,
+article.tlw_vacancies_cpt .vacancy-details,
+article.tlw_landing_page .vacancy-details {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+article.page .vacancy-details .panel-heading,
+article.post .vacancy-details .panel-heading,
+article.tlw_vacancies_cpt .vacancy-details .panel-heading,
+article.tlw_landing_page .vacancy-details .panel-heading {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #918F8F;
+  color: white;
+  font-size: 20px;
+  border-bottom: 4px solid white;
+}
+article.page .vacancy-details .table-bordered,
+article.post .vacancy-details .table-bordered,
+article.tlw_vacancies_cpt .vacancy-details .table-bordered,
+article.tlw_landing_page .vacancy-details .table-bordered {
+  border: none;
+  background-color: #E9E9E9;
+}
+article.page .vacancy-details .table-bordered:last-child,
+article.post .vacancy-details .table-bordered:last-child,
+article.tlw_vacancies_cpt .vacancy-details .table-bordered:last-child,
+article.tlw_landing_page .vacancy-details .table-bordered:last-child {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+article.page .vacancy-details .table-bordered th,
+article.post .vacancy-details .table-bordered th,
+article.tlw_vacancies_cpt .vacancy-details .table-bordered th,
+article.tlw_landing_page .vacancy-details .table-bordered th,
+article.page .vacancy-details .table-bordered td,
+article.post .vacancy-details .table-bordered td,
+article.tlw_vacancies_cpt .vacancy-details .table-bordered td,
+article.tlw_landing_page .vacancy-details .table-bordered td {
+  border: 4px solid white;
+}
 article.page .entry img.alignleft,
-article.post .entry img.alignleft {
+article.post .entry img.alignleft,
+article.tlw_vacancies_cpt .entry img.alignleft,
+article.tlw_landing_page .entry img.alignleft {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 article.page .entry img.alignright,
-article.post .entry img.alignright {
+article.post .entry img.alignright,
+article.tlw_vacancies_cpt .entry img.alignright,
+article.tlw_landing_page .entry img.alignright {
   margin-left: 10px;
   margin-bottom: 10px;
 }
 article.page time.date,
-article.post time.date {
+article.post time.date,
+article.tlw_vacancies_cpt time.date,
+article.tlw_landing_page time.date {
   display: block;
   background-color: #E9E9E9;
   height: 40px;
@@ -6441,7 +6507,9 @@ article.post time.date {
   font-weight: bold;
 }
 article.page time.date i,
-article.post time.date i {
+article.post time.date i,
+article.tlw_vacancies_cpt time.date i,
+article.tlw_landing_page time.date i {
   display: block;
   float: left;
   line-height: 40px;
@@ -6450,7 +6518,9 @@ article.post time.date i {
   background-color: #918F8F;
 }
 article.page hr,
-article.post hr {
+article.post hr,
+article.tlw_vacancies_cpt hr,
+article.tlw_landing_page hr {
   border: none;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -6459,15 +6529,21 @@ article.post hr {
 }
 article.page hr:before,
 article.post hr:before,
+article.tlw_vacancies_cpt hr:before,
+article.tlw_landing_page hr:before,
 article.page hr:after,
-article.post hr:after {
+article.post hr:after,
+article.tlw_vacancies_cpt hr:after,
+article.tlw_landing_page hr:after {
   content: "";
   position: absolute;
   height: 1px;
   width: 50%;
 }
 article.page hr:before,
-article.post hr:before {
+article.post hr:before,
+article.tlw_vacancies_cpt hr:before,
+article.tlw_landing_page hr:before {
   bottom: -1px;
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(#918F8F));
   background-image: -webkit-linear-gradient(left, transparent, #918F8F);
@@ -6475,7 +6551,9 @@ article.post hr:before {
   background-image: -o-linear-gradient(left, transparent, #918F8F);
 }
 article.page hr:after,
-article.post hr:after {
+article.post hr:after,
+article.tlw_vacancies_cpt hr:after,
+article.tlw_landing_page hr:after {
   right: 0px;
   bottom: -1px;
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#918F8F), to(transparent));
@@ -6484,17 +6562,23 @@ article.post hr:after {
   background-image: -o-linear-gradient(left, #918F8F, transparent);
 }
 article.page .main-txt .well,
-article.post .main-txt .well {
+article.post .main-txt .well,
+article.tlw_vacancies_cpt .main-txt .well,
+article.tlw_landing_page .main-txt .well {
   background-color: #E9E9E9;
 }
 article.page .main-txt .well span.label,
-article.post .main-txt .well span.label {
+article.post .main-txt .well span.label,
+article.tlw_vacancies_cpt .main-txt .well span.label,
+article.tlw_landing_page .main-txt .well span.label {
   display: inline-block;
   margin-bottom: 10px;
   padding: 5px;
 }
 article.page .main-txt .well h3.icon-header,
-article.post .main-txt .well h3.icon-header {
+article.post .main-txt .well h3.icon-header,
+article.tlw_vacancies_cpt .main-txt .well h3.icon-header,
+article.tlw_landing_page .main-txt .well h3.icon-header {
   line-height: 50px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -6502,22 +6586,32 @@ article.post .main-txt .well h3.icon-header {
   background-color: #918F8F;
 }
 article.page .main-txt .well.striped-bg,
-article.post .main-txt .well.striped-bg {
+article.post .main-txt .well.striped-bg,
+article.tlw_vacancies_cpt .main-txt .well.striped-bg,
+article.tlw_landing_page .main-txt .well.striped-bg {
   background-image: url(img/striped-img-overlay.png);
   background-blend-mode: color-burn;
 }
 article.page .main-txt .thank-you-message,
-article.post .main-txt .thank-you-message {
+article.post .main-txt .thank-you-message,
+article.tlw_vacancies_cpt .main-txt .thank-you-message,
+article.tlw_landing_page .main-txt .thank-you-message {
   background-color: #C60751;
 }
 article.page .main-txt .thank-you-message h1,
 article.post .main-txt .thank-you-message h1,
+article.tlw_vacancies_cpt .main-txt .thank-you-message h1,
+article.tlw_landing_page .main-txt .thank-you-message h1,
 article.page .main-txt .thank-you-message p,
-article.post .main-txt .thank-you-message p {
+article.post .main-txt .thank-you-message p,
+article.tlw_vacancies_cpt .main-txt .thank-you-message p,
+article.tlw_landing_page .main-txt .thank-you-message p {
   color: white;
 }
 article.page .main-txt .thank-you-message a.btn,
-article.post .main-txt .thank-you-message a.btn {
+article.post .main-txt .thank-you-message a.btn,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn,
+article.tlw_landing_page .main-txt .thank-you-message a.btn {
   width: 50%;
   margin: auto;
   color: white;
@@ -6533,7 +6627,9 @@ article.post .main-txt .thank-you-message a.btn {
   position: relative;
 }
 article.page .main-txt .thank-you-message a.btn:after,
-article.post .main-txt .thank-you-message a.btn:after {
+article.post .main-txt .thank-you-message a.btn:after,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:after,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:after {
   content: "\f0a9";
   font-family: FontAwesome;
   position: absolute;
@@ -6546,47 +6642,73 @@ article.post .main-txt .thank-you-message a.btn:after {
 }
 article.page .main-txt .thank-you-message a.btn:hover,
 article.post .main-txt .thank-you-message a.btn:hover,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:hover,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:hover,
 article.page .main-txt .thank-you-message a.btn:active,
 article.post .main-txt .thank-you-message a.btn:active,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:active,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:active,
 article.page .main-txt .thank-you-message a.btn:focus,
-article.post .main-txt .thank-you-message a.btn:focus {
+article.post .main-txt .thank-you-message a.btn:focus,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:focus,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:focus {
   background-color: #7A1039;
   color: white;
 }
 article.page .main-txt .thank-you-message a.btn:hover:after,
 article.post .main-txt .thank-you-message a.btn:hover:after,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:hover:after,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:hover:after,
 article.page .main-txt .thank-you-message a.btn:active:after,
 article.post .main-txt .thank-you-message a.btn:active:after,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:active:after,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:active:after,
 article.page .main-txt .thank-you-message a.btn:focus:after,
-article.post .main-txt .thank-you-message a.btn:focus:after {
+article.post .main-txt .thank-you-message a.btn:focus:after,
+article.tlw_vacancies_cpt .main-txt .thank-you-message a.btn:focus:after,
+article.tlw_landing_page .main-txt .thank-you-message a.btn:focus:after {
   color: #C60751;
 }
 article.page .main-txt a,
-article.post .main-txt a {
+article.post .main-txt a,
+article.tlw_vacancies_cpt .main-txt a,
+article.tlw_landing_page .main-txt a {
   color: #C60751;
   font-weight: bold;
 }
 article.page .main-txt a:hover,
 article.post .main-txt a:hover,
+article.tlw_vacancies_cpt .main-txt a:hover,
+article.tlw_landing_page .main-txt a:hover,
 article.page .main-txt a:active,
 article.post .main-txt a:active,
+article.tlw_vacancies_cpt .main-txt a:active,
+article.tlw_landing_page .main-txt a:active,
 article.page .main-txt a:focus,
-article.post .main-txt a:focus {
+article.post .main-txt a:focus,
+article.tlw_vacancies_cpt .main-txt a:focus,
+article.tlw_landing_page .main-txt a:focus {
   color: #7A1039;
 }
 article.page .main-txt ul,
-article.post .main-txt ul {
+article.post .main-txt ul,
+article.tlw_vacancies_cpt .main-txt ul,
+article.tlw_landing_page .main-txt ul {
   list-style: none;
   padding-left: 20px;
   margin-bottom: 20px;
 }
 article.page .main-txt ul li,
-article.post .main-txt ul li {
+article.post .main-txt ul li,
+article.tlw_vacancies_cpt .main-txt ul li,
+article.tlw_landing_page .main-txt ul li {
   padding-left: 20px;
   position: relative;
 }
 article.page .main-txt ul li:before,
-article.post .main-txt ul li:before {
+article.post .main-txt ul li:before,
+article.tlw_vacancies_cpt .main-txt ul li:before,
+article.tlw_landing_page .main-txt ul li:before {
   position: absolute;
   left: 0px;
   content: "\00BB";
@@ -6595,7 +6717,9 @@ article.post .main-txt ul li:before {
   margin-right: 10px;
 }
 article.page .main-txt ol,
-article.post .main-txt ol {
+article.post .main-txt ol,
+article.tlw_vacancies_cpt .main-txt ol,
+article.tlw_landing_page .main-txt ol {
   list-style: none;
   padding-left: 20px;
   margin-bottom: 20px;
@@ -6603,18 +6727,24 @@ article.post .main-txt ol {
   counter-reset: item;
 }
 article.page .main-txt ol li,
-article.post .main-txt ol li {
+article.post .main-txt ol li,
+article.tlw_vacancies_cpt .main-txt ol li,
+article.tlw_landing_page .main-txt ol li {
   position: relative;
 }
 article.page .main-txt ol li:before,
-article.post .main-txt ol li:before {
+article.post .main-txt ol li:before,
+article.tlw_vacancies_cpt .main-txt ol li:before,
+article.tlw_landing_page .main-txt ol li:before {
   content: counters(item, ".") " - ";
   counter-increment: item;
   color: #918F8F;
   font-weight: bold;
 }
 article.page .main-txt blockquote,
-article.post .main-txt blockquote {
+article.post .main-txt blockquote,
+article.tlw_vacancies_cpt .main-txt blockquote,
+article.tlw_landing_page .main-txt blockquote {
   font-style: italic;
   color: #918F8F;
   border-color: #7e7e7e;
@@ -6623,8 +6753,12 @@ article.post .main-txt blockquote {
 }
 article.page .main-txt h2,
 article.post .main-txt h2,
+article.tlw_vacancies_cpt .main-txt h2,
+article.tlw_landing_page .main-txt h2,
 article.page .main-txt h3,
-article.post .main-txt h3 {
+article.post .main-txt h3,
+article.tlw_vacancies_cpt .main-txt h3,
+article.tlw_landing_page .main-txt h3 {
   font-size: 25px;
   line-height: 25px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -6635,8 +6769,12 @@ article.post .main-txt h3 {
 }
 article.page .main-txt h4,
 article.post .main-txt h4,
+article.tlw_vacancies_cpt .main-txt h4,
+article.tlw_landing_page .main-txt h4,
 article.page .main-txt h5,
-article.post .main-txt h5 {
+article.post .main-txt h5,
+article.tlw_vacancies_cpt .main-txt h5,
+article.tlw_landing_page .main-txt h5 {
   font-size: 18px;
 }
 .search-list {
@@ -8485,8 +8623,8 @@ section#post-top-banner {
   position: relative;
   overflow: hidden;
   text-align: center;
-  border-top: 4px solid white;
   height: 204px;
+  border-bottom: 4px solid white;
 }
 section#post-top-banner .feat-img-part {
   position: relative;
@@ -8584,6 +8722,7 @@ section#slim-top-banner {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
+  border-bottom: 4px solid white;
 }
 @media screen and (orientation: landscape) {
   section#slim-top-banner {
@@ -8720,6 +8859,7 @@ section#top-banner {
   -o-background-size: cover;
   background-size: cover;
   background-position: center bottom;
+  border-bottom: 4px solid white;
   /*
 	nav.banner-links {
 	.rel;
@@ -9119,6 +9259,7 @@ section#top-banner #services-banner-links.col-blue a:focus {
 }
 section#testimonial-slider {
   position: relative;
+  border-bottom: 4px solid white;
 }
 section#testimonial-slider header.banner-title {
   height: 50px;
@@ -9319,6 +9460,7 @@ section.contact-links {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
+  border-bottom: 4px solid white;
 }
 section.contact-links .img-overlay {
   position: absolute;
@@ -9427,9 +9569,6 @@ section.contact-links .contact-info a.contact-info-link:hover i,
 section.contact-links .contact-info a.contact-info-link:active i,
 section.contact-links .contact-info a.contact-info-link:focus i {
   background-color: #C60751;
-}
-article.content-section {
-  border-top: 4px solid white;
 }
 article.content-section .container-fluid {
   padding-top: 30px;
@@ -9752,6 +9891,119 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   line-height: 42px;
   position: relative;
   z-index: 1;
+}
+.pg-section#vacancies-section {
+  background: #C60751;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #C60751), color-stop(1, #7A1039));
+  background: -ms-linear-gradient(bottom, #C60751, #7A1039);
+  background: -moz-linear-gradient(center bottom, #C60751 0%, #7A1039 100%);
+  background: -o-linear-gradient(#7A1039, #C60751);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7A1039', endColorstr='#C60751', GradientType=0);
+  border-top: 4px solid white;
+}
+.pg-section#vacancies-section .container-fluid {
+  position: relative;
+  z-index: 2;
+  padding-top: 20px;
+}
+.pg-section#vacancies-section article.hentry {
+  background-color: white;
+  padding: 0px 30px 30px 30px;
+  margin-bottom: 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #7A1039;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pg-section#vacancies-section article.hentry h4 {
+  font-size: 30px;
+}
+.pg-section#vacancies-section article.hentry .ref {
+  color: #918F8F;
+  margin-bottom: 10px;
+}
+.pg-section#vacancies-section article.hentry .close-date {
+  width: 70%;
+  line-height: 30px;
+  height: 30px;
+  font-size: 16px;
+  background-color: #7A1039;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.pg-section#vacancies-section article.hentry .description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pg-section#vacancies-section article.hentry .btn {
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  padding: 0px 0px 0px 20px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: left;
+  border: none;
+  background-color: #4b4b4b;
+  color: white;
+  position: relative;
+}
+.pg-section#vacancies-section article.hentry .btn:after {
+  content: "\f0a9";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #918F8F;
+  line-height: 40px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+.pg-section#vacancies-section article.hentry .btn:hover,
+.pg-section#vacancies-section article.hentry .btn:active,
+.pg-section#vacancies-section article.hentry .btn:focus {
+  background-color: #918F8F;
+}
+.pg-section#vacancies-section article.hentry .btn:hover:after,
+.pg-section#vacancies-section article.hentry .btn:active:after,
+.pg-section#vacancies-section article.hentry .btn:focus:after {
+  color: #C60751;
+}
+.pg-section#cv-send-section {
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #E9E9E9));
+  background: -ms-linear-gradient(bottom, white, #E9E9E9);
+  background: -moz-linear-gradient(center bottom, white 0%, #E9E9E9 100%);
+  background: -o-linear-gradient(#E9E9E9, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9E9E9', endColorstr='white', GradientType=0);
+  padding-bottom: 50px;
+}
+.pg-section#cv-send-section .btn {
+  background-color: #C60751;
+  color: white;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 40px;
+}
+.pg-section#cv-send-section .btn i {
+  line-height: 40px;
 }
 .pg-section#faqs-section {
   border-top: 4px solid #4b4b4b;

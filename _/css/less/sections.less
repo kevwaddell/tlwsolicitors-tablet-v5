@@ -3,8 +3,9 @@ section#post-top-banner {
 .rel;
 .over-hide;
 text-align: center;
-.border-top(@wht; 0.4);
+//.border-top(@wht; 0.4);
 .h(20.4);
+.border-bot(white; 0.4);
 	
 	.feat-img-part {
 	.rel;
@@ -85,6 +86,7 @@ height: 20vh;
 .bg-repeat(no-repeat);
 .bg-size;
 background-position: center center;
+.border-bot(white; 0.4);
 
 	@media screen and (orientation: landscape) {
 	height: 30vh;	
@@ -185,7 +187,7 @@ height: 50vh;
 .bg-repeat(no-repeat);
 .bg-size();
 background-position: center bottom;
-
+.border-bot(white; 0.4);
 		
 	@media screen and (orientation: landscape) {
 	height: 100%;
@@ -531,6 +533,7 @@ background-position: center bottom;
 section#testimonial-slider {
 //.h(53);
 .rel;
+.border-bot(white; 0.4);
 	
 	header.banner-title {
 	.h(5);
@@ -775,6 +778,7 @@ section.contact-links {
 .bg-repeat(no-repeat);
 .bg-size;
 background-position: center center;
+.border-bot(white; 0.4);
 
 	.img-overlay {
 	.abs;
@@ -874,7 +878,7 @@ background-position: center center;
 
 // ARTICLE SECTION
 article.content-section {
-.border-top(white; 0.4);
+//.border-top(white; 0.4);
 	.container-fluid {
 	.pad-top(3);
 	.pad-bot(5);
@@ -1187,6 +1191,112 @@ article.content-section {
 	.rel;
 	z-index: 1;
 	}
+	
+	// -->> Jobs Section
+	&#vacancies-section {
+	.gradient(@red, @red , @redMid);
+	.border-top(@wht; 0.4);
+	
+		.container-fluid {
+		.rel;
+		z-index: 2;	
+		.pad-top(2);
+		}
+
+		article.hentry {
+		.bg-col(@wht);
+		.pad(0;3;3;3);
+		.mag-bot(4);	
+		.rounded(10px);
+		.border(@redMid; 0.2);
+		.drop-shadow(0, 3px, 10px, 0.5);
+		
+			h4 {
+			.font-size(3);	
+			}
+			
+			.ref {
+			.txt-col-gray;
+			.mag-bot(1);	
+			}
+			
+			.close-date {
+			width: 70%;
+			.line-h(3);
+			.h(3);
+			.font-size(1.6);
+			.bg-col-red-dk;
+			.txt-col-wht;	
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: -15px;
+			margin-bottom: 20px;
+			.rounded(15px);
+			.bold;
+			}
+			
+			.description {
+			.font-size(1.6);
+			.mag-bot(2);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			}
+			
+			.btn {
+			.font-slab-serif;
+			.caps;
+			.pad(0;0;0;2);
+			.font-size(2);
+			.line-h(4);
+			text-align: left;	
+			.no-border;
+			.bg-col-grayDk;
+			.txt-col-wht;
+			.rel;	
+				
+				&:after {
+				content: "\f0a9";	
+				font-family: FontAwesome;	
+				.abs;
+				.right(0);
+				.top(0);
+				.col(@gray);
+				.line-h(4);
+				.pad-right(2);
+				.font-size(2);
+				}
+			
+				&:hover, &:active, &:focus {
+				.bg-col-gray;
+					&:after {
+					.col(@red);	
+					}
+				}
+
+			}
+		}
+		
+		
+	}
+	
+	// -->> CV email Message Section
+	
+	&#cv-send-section {
+	.gradient(@wht, @wht , @grayLt);	
+	.pad-bot(5);
+		.btn {
+		.bg-col-red;
+		.txt-col-wht;
+		.font-slab-serif;
+		.no-border;
+		.pad-top(0);
+		.pad-bot(0);
+		.line-h(4);	
+			i {
+			.line-h(4);		
+			}
+		}
+	} 
 	
 	// -->> FAQ's SECTION
 
