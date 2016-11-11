@@ -7435,6 +7435,89 @@ section.social-feed span.date {
 .page-links .wp-pagenavi a.first:focus {
   background-color: #c4c2c2;
 }
+.vacs-page-links {
+  margin-bottom: 20px;
+}
+.vacs-page-links .wp-pagenavi {
+  font-size: 14px;
+  color: white;
+  height: 40px;
+  text-align: left;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-weight: bold;
+}
+.vacs-page-links .wp-pagenavi span {
+  display: inline-block;
+  line-height: 40px;
+}
+.vacs-page-links .wp-pagenavi span.pages {
+  display: block;
+  float: right;
+  margin-bottom: 0px;
+  color: white;
+}
+.vacs-page-links .wp-pagenavi span.current {
+  background-color: white;
+  color: #C60751;
+  width: 40px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+  margin-right: 5px;
+}
+.vacs-page-links .wp-pagenavi span.extend {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 2px solid white;
+}
+.vacs-page-links .wp-pagenavi a {
+  display: inline-block;
+  width: 40px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  text-decoration: none;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  margin-right: 5px;
+}
+.vacs-page-links .wp-pagenavi a i {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+}
+.vacs-page-links .wp-pagenavi a.page,
+.vacs-page-links .wp-pagenavi a.nextpostslink,
+.vacs-page-links .wp-pagenavi a.previouspostslink,
+.vacs-page-links .wp-pagenavi a.last,
+.vacs-page-links .wp-pagenavi a.first {
+  background-color: transparent;
+}
+.vacs-page-links .wp-pagenavi a.page:hover,
+.vacs-page-links .wp-pagenavi a.nextpostslink:hover,
+.vacs-page-links .wp-pagenavi a.previouspostslink:hover,
+.vacs-page-links .wp-pagenavi a.last:hover,
+.vacs-page-links .wp-pagenavi a.first:hover,
+.vacs-page-links .wp-pagenavi a.page:active,
+.vacs-page-links .wp-pagenavi a.nextpostslink:active,
+.vacs-page-links .wp-pagenavi a.previouspostslink:active,
+.vacs-page-links .wp-pagenavi a.last:active,
+.vacs-page-links .wp-pagenavi a.first:active,
+.vacs-page-links .wp-pagenavi a.page:focus,
+.vacs-page-links .wp-pagenavi a.nextpostslink:focus,
+.vacs-page-links .wp-pagenavi a.previouspostslink:focus,
+.vacs-page-links .wp-pagenavi a.last:focus,
+.vacs-page-links .wp-pagenavi a.first:focus {
+  background-color: white;
+  color: #C60751;
+}
 .search-form-wrap {
   text-align: center;
 }
@@ -9915,7 +9998,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 .pg-section#vacancies-section article.hentry {
   background-color: white;
   padding: 0px 30px 30px 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
