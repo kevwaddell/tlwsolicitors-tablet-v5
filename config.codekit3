@@ -1067,10 +1067,10 @@
 		"oAP": "\/_\/inc\/global\/forms-script-cap-name.inc",
 		"oF": 0
 		},
-	"\/_\/inc\/global\/head-html.php": {
+	"\/_\/inc\/global\/head-html.inc": {
 		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/_\/inc\/global\/head-html.php",
+		"oA": 2,
+		"oAP": "\/_\/inc\/global\/head-html.inc",
 		"oF": 0
 		},
 	"\/_\/inc\/global\/masthead.php": {

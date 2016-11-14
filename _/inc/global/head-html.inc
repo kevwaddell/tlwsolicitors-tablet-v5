@@ -11,7 +11,7 @@
 	})(window,document,'script','dataLayer','GTM-PDNR9J');</script>
 	<!-- End Google Tag Manager -->
 	<?php } ?>
-		<?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
+	<?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,22 +20,14 @@
 	})(window,document,'script','dataLayer','GTM-PLBR4F');</script>
 	<!-- End Google Tag Manager -->
 	<?php } ?>
-
-
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	
+	<meta charset="<?php bloginfo('charset'); ?>">
+
 	<meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	
 	<meta name="format-detection" content="telephone=yes">
-	
-	<meta name="geo.region" content="GB">
-	<meta name="geo.placename" content="North Shields">
-	<meta name="geo.position" content="55.009452;-1.490004">
-	<meta name="ICBM" content="55.009452, -1.490004">
-	
+		   
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/touch-icon-iphone.png" /> 
 	<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-ipad.png" /> 
 	<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_directory'); ?>/_/img/touch-icon-iphone-retina.png" />
@@ -43,16 +35,17 @@
 	<link rel="apple-touch-startup-image" href="<?php bloginfo('template_directory'); ?>/_/img/apple-start-up-img.png" />
 	
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	
+
 	<?php wp_head(); ?>
 	
 	<?php 
+	if ( isset($_GET['src']) && $_GET['src'] == "mis-sold-solar-co-uk" ) {
+	setcookie("src",$_GET['src'] , strtotime( '+6 months' ), "/financial-mis-selling/solar-panel-mis-selling" );
+	}
+	
 	if ( isset($_GET['gclid']) ) {
 		setcookie("gclid",$_GET['gclid'] ,0, '/' );	
 	}
 	?>
-	
 </head>
