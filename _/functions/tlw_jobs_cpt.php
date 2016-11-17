@@ -23,7 +23,7 @@ function register_cpt_tlw_vacancies_cpt() {
 		'labels' => $labels,
 		'hierarchical' => false,
 		'description' => 'Post type for TLW Job vacancies',
-		'supports' => array( 'editor' ),
+		'supports' => array('title' ,'editor' ),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -46,6 +46,7 @@ function register_cpt_tlw_vacancies_cpt() {
 
 	register_post_type( 'tlw_vacancies_cpt', $args );
 	
+/*
 	remove_post_type_support('tlw_vacancies_cpt', 'title');
 	
 	add_action( 'edit_form_after_title', 'vacancy_title' );
@@ -65,6 +66,7 @@ function register_cpt_tlw_vacancies_cpt() {
 		}
 		
 	}
+*/
 } 
 
 ?>
