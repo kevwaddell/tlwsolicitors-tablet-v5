@@ -58,11 +58,6 @@
 	Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
 	</script>
 	<!-- Adwords Call tracking -->
-	
-	<?php 
-	if ( isset($_GET['gclid']) ) {
-		setcookie("gclid",$_GET['gclid'] ,0, '/' );	
-	}
-	?>
+
 	
 </head>
