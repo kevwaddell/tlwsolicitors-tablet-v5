@@ -13,6 +13,39 @@ $more_btn_text = "Continue Reading";
 $section_title = "Article text";
 ?>
 <article <?php post_class("content-section"); ?>>
+	
+	<script type="application/ld+json">
+	{ "@context": "http://schema.org", 
+	 "@type": "BlogPosting",
+	 "headline": "<?php echo the_title(); ?>",
+	 "description": "<?php echo get_the_excerpt(); ?>",
+	 "image": {
+		"@type" : "ImageObject",
+	 	"url": "<?php echo $banner_feat_img[0];?>",
+	 	"width": "<?php echo $banner_feat_img[1];?>",
+	 	"height": "<?php echo $banner_feat_img[2];?>"
+	 	},
+	 "author": {
+        "@type" : "Organization",
+        "name" : "<?php bloginfo('name'); ?>"
+        },
+	 "publisher": {
+        "@type" : "Organization",
+        "name" : "<?php bloginfo('name'); ?>",
+        "logo": {
+			"@type": "ImageObject",
+			"url": "https://www.tlwsolicitors.co.uk/wp-content/uploads/2016/11/tlw-logo-wide.png",
+			"width": "322",
+			"height": "80"
+			}
+        },
+	 "url": "<?php the_permalink(); ?>",
+	 "datePublished": "<?php echo $post->post_date; ?>",
+	 "dateModified": "<?php echo $post->post_modified; ?>",
+	 "mainEntityOfPage": "<?php the_permalink(); ?>"
+	 }
+	</script>
+
 	<a name="article-txt" id="article-txt" class="section-target"></a>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
