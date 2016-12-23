@@ -13,6 +13,8 @@ $content = apply_filters( 'the_content', $jobs_pg->post_content );
 <!-- MAIN CONTENT START -->
 <main class="page-col-red">
 	
+	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
+	
 	<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>

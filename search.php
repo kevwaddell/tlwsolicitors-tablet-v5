@@ -9,6 +9,8 @@
 	?>
 	<main class="page-col-red">
 	 		
+	 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
+	 		
 	 		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>
 	 		
 			<article class="page">

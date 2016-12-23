@@ -6,6 +6,8 @@
 			
 			<main class="page-col-red">
 				
+				<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
+				
 				<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 							
 				<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>

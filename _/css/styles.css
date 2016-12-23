@@ -11787,10 +11787,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   padding-bottom: 15px;
   position: relative;
   background-color: #4b4b4b;
-}
-#global-tel-num .container-fluid {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  overflow: hidden;
 }
 #global-tel-num .overlay {
   position: absolute;
@@ -11811,7 +11808,8 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
 }
 #global-tel-num i {
-  display: block;
+  position: absolute;
+  top: 15px;
   width: 50px;
   height: 50px;
   line-height: 44px;
@@ -11825,8 +11823,13 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
-  position: relative;
   z-index: 2;
+}
+#global-tel-num i.fa-phone {
+  left: 15px;
+}
+#global-tel-num i.fa-mobile-phone {
+  right: 15px;
 }
 #global-tel-num .number {
   position: relative;
@@ -12140,35 +12143,32 @@ body#login .login .tml-action-links a:focus {
 /* Xmas styles */
 /* --------------------------- */
 #xmas-popup-btn-wrap {
-  position: fixed;
-  left: 0px;
+  position: relative;
   width: 100%;
-  height: 70px;
   text-align: center;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #xmas-popup-btn-wrap .wrap-inner {
-  margin-top: 20px;
-  height: 50px;
+  height: 70px;
+  border-bottom: 4px solid white;
   background-color: #789b2c;
 }
 #xmas-popup-btn-wrap p {
-  line-height: 50px;
+  line-height: 66px;
   color: white;
   font-weight: bold;
   font-size: 16px;
 }
 #xmas-popup-btn-wrap.pop-up-inactive {
-  bottom: 0px;
-  animation-delay: 2s;
+  height: 70px;
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 #xmas-popup-btn-wrap.pop-up-active {
-  bottom: -70px;
+  height: 0px;
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
@@ -12195,15 +12195,15 @@ body#login .login .tml-action-links a:focus {
 }
 #xmas-popup-btn-wrap .holly {
   position: absolute;
-  bottom: 0px;
+  top: 3px;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 #xmas-popup-btn-wrap .holly.left {
   left: 10px;
@@ -12307,7 +12307,7 @@ body#login .login .tml-action-links a:focus {
 }
 #xmas-popup-wrap .xmas-popup-inner button#close-xmas-popup {
   position: absolute;
-  bottom: -35px;
+  bottom: -25px;
   left: 50%;
   max-width: 200px;
   margin-left: -100px;
@@ -12316,12 +12316,12 @@ body#login .login .tml-action-links a:focus {
   color: white;
   text-transform: uppercase;
   padding: 0px 20px 0px 20px;
-  line-height: 50px;
+  line-height: 40px;
   font-weight: bold;
 }
 #xmas-popup-wrap .xmas-popup-inner button#close-xmas-popup i {
   float: right;
-  line-height: 50px;
+  line-height: 40px;
   color: #ACD15C;
 }
 #xmas-popup-wrap .xmas-popup-inner button#close-xmas-popup:hover,

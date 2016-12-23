@@ -5,6 +5,8 @@
 	?>	
 	<main>
 		
+		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
+		
 		<?php include (STYLESHEETPATH . '/_/inc/global/awards-strip.inc'); ?>	
 		
 		<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-404.inc'); ?>

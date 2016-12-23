@@ -2897,11 +2897,7 @@ article.content-section {
 .pad-bot(1.5);
 .rel;
 .bg-col-grayDk;
-
-	.container-fluid {
-	.pad-top(0);	
-	.pad-bot(0);
-	}
+.over-hide;
 	
 	.overlay {
 	.abs;
@@ -2916,7 +2912,8 @@ article.content-section {
 	}
 
 	i {
-	.block;
+	.abs;
+	.top(1.5);
 	.w(5);
 	.h(5);
 	.line-h(4.4);
@@ -2926,8 +2923,16 @@ article.content-section {
 	.col(@wht);	
 	.bg-col-red;
 	.drop-shadow(0, 3px, 10px, 0.8);
-	.rel;
 	z-index: 2;
+	//.mag-left(1.5);
+	//.mag-right(1.5);
+		&.fa-phone {
+		.left(1.5);	
+		}
+		
+		&.fa-mobile-phone {
+		.right(1.5);		
+		}
 	}
 	
 	.number {

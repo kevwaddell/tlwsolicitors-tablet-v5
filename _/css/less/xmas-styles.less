@@ -1,34 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 #xmas-popup-btn-wrap {
-.fixed;
-.left(0);
+.rel;
 width: 100%;
-.h(7);
+//.h(7);
 text-align: center;
-.animated;
+//.animated;
+.transition(0.3s, ease-in-out);
 	.wrap-inner {
-	.mag-top(2);
-	.h(5);
+	.h(7);
+	.border-bot(@wht; 0.4);
 	.bg-col(darken(@green, 20%));		
 	}
 	
 	p {
-	.line-h(5);	
+	.line-h(6.6);	
 	.col(white);
 	.bold;
 	.font-size(1.6);
 	}
 
 	&.pop-up-inactive {
-	.bottom(0);	
-	animation-delay: 2s;
+	.h(7);
+	//.bottom(0);	
+	//animation-delay: 2s;
 	//.animate-delay(2s);
 	.slideInUp;
 	}
 	
 	&.pop-up-active {
-	.bottom(-7);
+	.h(0);
+	//.bottom(-7);
 	.slideInDown;	
 	}
 	
@@ -56,12 +58,12 @@ text-align: center;
 	
 	.holly {
 	.abs;
-	.bottom(0);	
+	.top(0.3);	
 	background-position: center center;	
 	.bg-repeat(no-repeat);
 	.bg-size(contain);
-	.w(7);
-	.h(7);
+	.w(6);
+	.h(6);
 	
 		&.left {
 		.left(1);	
@@ -147,7 +149,7 @@ z-index: 1000;
 		
 		button#close-xmas-popup {
 		.abs;
-		.bottom(-3.5);
+		.bottom(-2.5);
 		left: 50%;	
 		.max-w(20);
 		.mag-left(-10);
@@ -156,11 +158,11 @@ z-index: 1000;
 		.col(white);
 		.caps;
 		.pad(0;2;0;2);
-		.line-h(5);
+		.line-h(4);
 		.bold;
 			i {
 			.fright;
-			.line-h(5);	
+			.line-h(4);	
 			.col(@green);
 			}
 			
