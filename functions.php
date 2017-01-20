@@ -96,6 +96,14 @@ function add_async_attribute($tag, $handle) {
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 //}
 
+function custom_dequeue() {
+    wp_dequeue_style('autoptimize-toolbar');
+    wp_deregister_style('autoptimize-toolbar');
+}
+
+add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
+add_action( 'wp_head', 'custom_dequeue', 9999 );
+
 if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
 function ewp_remove_script_version( $src ){
 	return remove_query_arg( 'ver', $src );
