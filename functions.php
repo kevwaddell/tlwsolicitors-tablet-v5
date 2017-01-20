@@ -99,9 +99,6 @@ add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 function custom_dequeue() {
     wp_dequeue_style('autoptimize-toolbar');
     wp_deregister_style('autoptimize-toolbar');
-    
-    wp_dequeue_style('gforms_css');
-    wp_deregister_style('gforms_css');
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
