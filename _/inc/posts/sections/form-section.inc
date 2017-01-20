@@ -12,7 +12,7 @@ $section_title = $form->title;
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-		<?php gravity_form($form->id, false, true, false, null, true); ?>
+		<?php gravity_form($form->id, false, true, false, '', false); ?>
 			</div>
 		</div>
 	</div>
