@@ -384,4 +384,19 @@
 			
 	});	
 	
+	$(window).bind('load',function(){
+			
+		//console.log("Loaded");
+		
+		$('.full-bg-img').each(function(index, Element) {
+		var src = $(Element).data('src');
+		//console.log(src);
+		if (src !== undefined) {
+			$(Element).css('background-image', 'url(' +src+ ')');
+			}
+		});
+	
+	});
+
+	
 })(window.jQuery);

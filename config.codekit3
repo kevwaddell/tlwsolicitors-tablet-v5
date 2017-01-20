@@ -7,7 +7,7 @@
 		"uuidString": "221FBE14-6975-4F86-8189-14F9C3313A8C"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25504",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -1376,6 +1376,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/_\/js\/modernizr-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/_\/js\/min\/modernizr-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/archive-tlw_vacancies_cpt.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -2277,6 +2286,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -2816,6 +2829,10 @@
 		"prefer-const": {
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
+			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
 		"prefer-numeric-literals": {
 			"active": 0,

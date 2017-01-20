@@ -12,21 +12,82 @@ function tlw_scripts() {
 	wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('twitter-bootstrap'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 	
 	// Load JS
+	$functions_dep = array(
+	'jquery',
+	'bootstrap-select', 
+	'jquery-cookie', 
+	'slim-scroll'
+	);
 	//wp_enqueue_script( 'jquery' );
 	//wp_enqueue_script( 'jquery-ui-core' );
-	wp_enqueue_script( 'modernizr-min', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '2.8.3', false );
-	wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array(), '1.4.1', true );
-	wp_enqueue_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array(), '1.3.6', true );
-	wp_enqueue_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', array('jquery-cookie', 'slim-scroll', 'bootstrap-select'), filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
+	wp_deregister_script('jquery-core');
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js', array(), '3.0.0', true);
+	wp_enqueue_script( 'modernizr-min', get_stylesheet_directory_uri() . '/_/js/modernizr-min.js', array(), '2.8.3', true );
+	wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
+	wp_enqueue_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
+	wp_enqueue_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', $functions_dep, filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
 
+//if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
+add_filter( 'gform_init_scripts_footer', '__return_true' );
+
+function add_async_attribute($tag, $handle) {
+	if (!is_admin()) {
+	//echo '<pre>';print_r($handle);echo '</pre>';
+   }
+   // add script handles to the array below
+   $scripts_to_asyc = array(
+   'jquery',
+   'jquery-cookie',
+   'slim-scroll', 
+   'bootstrap-select',
+   'functions'
+   );
+   
+    if ($handle == 'gform_json' || $handle == 'gform_gravityforms' || $handle == 'gform_conditional_logic' || $handle == 'gform_placeholder') {
+	$scripts_to_asyc[] = 'gform_json';   
+	$scripts_to_asyc[] = 'gform_gravityforms';
+	$scripts_to_asyc[] = 'gform_conditional_logic';
+	$scripts_to_asyc[] = 'gform_placeholder';
+   }
+   
+/*
+    $scripts_to_defer = array(
+   'jquery-cookie',
+   'slim-scroll', 
+   'bootstrap-select'
+   );
+*/
+   
+   foreach($scripts_to_asyc as $asyn_script) {
+      if ($asyn_script === $handle) {
+         return str_replace(' src', ' defer src', $tag);
+      }
+   }
+   
+/*
+    foreach($scripts_to_defer as $defer_script) {
+      if ($defer_script === $handle) {
+         return str_replace(' src', ' defer src', $tag);
+      }
+   }
+*/
+   return $tag;
+}
+
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+//}
+
+if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
 function ewp_remove_script_version( $src ){
 	return remove_query_arg( 'ver', $src );
 }
 add_filter( 'script_loader_src', 'ewp_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'ewp_remove_script_version', 15, 1 );
+}
 
 add_action( 'after_setup_theme', 'editor_styles' );
 
