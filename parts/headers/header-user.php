@@ -19,6 +19,8 @@
 	<link rel="apple-touch-startup-image" href="<?php bloginfo('template_directory'); ?>/_/img/apple-start-up-img.png">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
+	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS.js');  ?></script>
 	
 	<?php wp_head(); ?>
 	

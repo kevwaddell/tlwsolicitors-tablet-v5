@@ -23,7 +23,7 @@ $all_forms_active = get_field('all_forms_active', 'option');
 			
 			<div class="row">
 				 	
-			 	<div class="col-md-10 col-md-offset-1">
+			 	<div class="col-sm-10 col-sm-offset-1">
 						
 				 	<div class="entry entry-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 						
