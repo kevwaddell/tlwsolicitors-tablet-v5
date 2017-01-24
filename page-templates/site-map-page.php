@@ -9,7 +9,7 @@ Template Name: Sitemap page
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 
 <!-- MAIN CONTENT START -->
-<main>
+<main id="main-content">
 	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 	

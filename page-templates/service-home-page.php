@@ -19,7 +19,7 @@ Template Name: Service Home page
 	?>	
 	
 	<!-- MAIN CONTENT START -->
-	<main>
+	<main id="main-content">
 		
 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 		

@@ -46,7 +46,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<style>
+	<?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css')."</style>"; ?>
+	</style>
 	
+	<?php 
+	$form_active = get_field('lp_form_active');
+	$all_forms_active = get_field('all_forms_active', 'option');
+	if ($form_active && $all_forms_active) {
+	$form = get_field('lp_form');
+	//echo '<pre class="debug">';print_r($form);echo '</pre>';	
+	gravity_form_enqueue_scripts( $form->id );
+	}	
+	?>
 	<?php wp_head(); ?>
 	
 	<!-- Adwords Call tracking -->
@@ -59,5 +71,4 @@
 	</script>
 	<!-- Adwords Call tracking -->
 
-	
 </head>

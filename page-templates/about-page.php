@@ -19,7 +19,7 @@ Template Name: About page template
 	?>	
 	
 	<!-- MAIN CONTENT START -->
-	<main>
+	<main id="main-content">
 		
 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 		

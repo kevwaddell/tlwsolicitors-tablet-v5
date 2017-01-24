@@ -16486,6 +16486,9 @@ section.contact-links .contact-info a.contact-info-link:active i,
 section.contact-links .contact-info a.contact-info-link:focus i {
   background-color: #C60751;
 }
+article.content-section {
+  background-color: white;
+}
 article.content-section .container-fluid {
   padding-top: 30px;
   padding-bottom: 50px;

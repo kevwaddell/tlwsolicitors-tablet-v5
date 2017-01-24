@@ -8,7 +8,7 @@ Template Name: Thank page template
 		
 
 		<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-		<main>	
+		<main id="main-content">	
 		<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>
 		
 		<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-thankyou.inc'); ?>

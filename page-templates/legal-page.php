@@ -31,7 +31,7 @@ Template Name: Legal pages template
 	}
 	
 	?>	
-	<main>
+	<main id="main-content">
 		
 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 		

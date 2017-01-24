@@ -7,7 +7,7 @@
 	$banner_active = get_field('hp_top_banner_active', 'option');	
 	?>
 	<!-- MAIN CONTENT START -->
-	<main>
+	<main id="main-content">
 		
 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 				
