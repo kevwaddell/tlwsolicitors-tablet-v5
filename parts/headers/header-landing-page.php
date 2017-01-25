@@ -1,6 +1,6 @@
 <?php include (STYLESHEETPATH . '/_/inc/landing-page/head-html.inc'); ?>	
 
-<body id="landing-page" <?php body_class(); ?>>
+<body id="landing-page" <?php body_class('atfc-tablet-css'); ?>>
 <?php if ($_SERVER['SERVER_NAME']=='tlwsolicitors.staging.wpengine.com') { ?>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDNR9J"

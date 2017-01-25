@@ -98,7 +98,7 @@ function link_to_loadCSS_script($html, $handle, $href ) {
     $dom = new DOMDocument();
     $dom->loadHTML($html);
     $a = $dom->getElementById($handle.'-css');
-    return "<script>loadCSS('" . $a->getAttribute('href') . "',0,'" . $a->getAttribute('media') . "');</script>\n";
+    return "<script>loadCSS('" . $a->getAttribute('href') . "',document.getElementById('loadcss'),'" . $a->getAttribute('media') . "');</script>\n";
     }
 }
 
