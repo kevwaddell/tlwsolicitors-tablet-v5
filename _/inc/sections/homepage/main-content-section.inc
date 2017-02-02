@@ -12,7 +12,9 @@ $section_title = "TLW introduction";
 <article <?php post_class("content-section"); ?>>
 	<a name="service-info-txt" id="service-info-txt" class="section-target"></a>
 					
-	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>	
+	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.inc'); ?>		
 	
 	<div class="container-fluid">
 		

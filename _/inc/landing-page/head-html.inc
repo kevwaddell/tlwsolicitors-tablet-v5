@@ -47,7 +47,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
-	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS-min.js');  ?></script>
 	
 	<?php 
 	$form_active = get_field('lp_form_active');
@@ -60,13 +59,24 @@
 	?>
 	<?php wp_head(); ?>
 	
+	<script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+        document.body.classList.remove("atfc-tablet-css");
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) { 
+	      raf(function() { window.setTimeout(loadDeferredStyles, 0);});
+     } else { window.addEventListener('load', loadDeferredStyles); }
+	</script>
+	
 	<!-- Adwords Call tracking -->
 	<script type="text/javascript">
-	(function(a,e,c,f,g,h,b,d){var
-	k={ak:"966769174",cl:"lASLCOjY32sQlvT-zAM",autoreplace:"08001695925"};a[c]=a[c]|
-	|function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||
-	(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new
-	Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
+	(function(a,e,c,f,g,h,b,d){var k={ak:"966769174",cl:"lASLCOjY32sQlvT-zAM",autoreplace:"08001695925"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]|| (a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
 	</script>
 	<!-- Adwords Call tracking -->
 

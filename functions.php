@@ -7,6 +7,10 @@ update_option('home','http://tlwsolicitors.dev');
 
 add_action( 'after_setup_theme', 'editor_styles' );
 
+function editor_styles() {
+add_editor_style();	
+}
+if (!is_admin()) {
 function tlw_scripts() {
 	// Load stylesheets.
 	//wp_enqueue_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('twitter-bootstrap'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
@@ -44,71 +48,123 @@ function tlw_scripts() {
 	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', $functions_dep, filemtime( get_stylesheet_directory().'/_/js/functions.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'tlw_scripts' );
+}
 
+if(!is_admin()) {
+	
+	add_action('wp_print_styles', 'show_all_styles');
+	function show_all_styles() {
+		// use global to call variable outside function
+		
+		global $wp_styles;
+		
+		// arrange the queue based on its dependency
+		$wp_styles->all_deps($wp_styles->queue);	
+		
+		// The result
+		$handles = $wp_styles->to_do;
+		
+		$css_code = '';
+	
+		// New file location: E:xampp\htdocs\wordpress\wp-content\theme\wdc\merged-style.css
+		$merged_file_location = get_stylesheet_directory() .'/_/css/merged-style.css';
+		$merged_file = file_get_contents($merged_file_location);
+		//echo '<pre>';print_r($wp_styles->queue);echo '</pre>';
+		// loop all styles
+		foreach ($handles as $handle)
+		{
+			/*
+				Clean up the url, for example: wp-content/themes/wdc/style.min.css?v=4.6
+				become wp-content/themes/wdc/style.min.css
+			*/
+			$src = strtok($wp_styles->registered[$handle]->src, '?');
+			
+			// #1. Combine CSS File.
+			// If the src is url		
+			if (strpos($src, 'http') !== false  || strpos($src, 'https') !== false) {
+				// Get thr site url, e.g. http://webdevzoom.com/wordpress
+				$site_url = site_url();
+			
+				/*
+					If the css file come from local server, change the full url into relative path
+					For example: http://webdevzoom.com/wordpress/wp-content/plugins/wpnewsman/css/menuicon.css
+					Become: /wp-content/plugins/wpnewsman/css/menuicon.css
+					
+					Otherwise, leave it as is, e.g: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+				*/
+				if (strpos($src, $site_url) !== false)
+					$css_file_path = str_replace($site_url, '', $src);
+				else
+					$css_file_path = $src;
+				
+				/*
+					In order to be able to use file_get_contents function, we need to remove preceding slash,
+					For example: /wp-content/plugins/wpnewsman/css/menuicon.css
+					Become: wp-content/plugins/wpnewsman/css/menuicon.css
+				*/
+				$css_file_path = ltrim($css_file_path, '/');
+			} else {			
+				$css_file_path = ltrim($src, '/');
+			}
+			
+			// Check wether file exists then merge
+			if  (file_exists($css_file_path)) {
+				$css_code .=  file_get_contents($css_file_path);
+			}
+		}
+	
+		// write the merged styles into current theme directory
+		if ($merged_file != $css_code) {
+		file_put_contents ($merged_file_location , $css_code);
+		}
+		
+		// #2. Load the URL of merged file
+		wp_enqueue_style('merged-style',  get_stylesheet_directory_uri() . '/_/css/merged-style.css');
+		
+		// #3. Deregister all handles
+		foreach ($handles as $handle)
+		{
+			wp_deregister_style($handle);
+		}
+	}
+}
+
+if(!is_admin()) {
 add_filter( 'gform_init_scripts_footer', '__return_true' );
 
+	function custom_dequeue() {
+		
+		if (!is_admin()) {
+	    wp_dequeue_style('autoptimize-toolbar');
+	    wp_deregister_style('autoptimize-toolbar');
+	    wp_dequeue_script('autoptimize-toolbar');
+	    wp_deregister_script('autoptimize-toolbar');
+	    }
+	}
+	
+	add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
+	add_action( 'wp_head', 'custom_dequeue', 9999 );
+
 function add_async_attribute($tag, $handle) {
-	if (!is_admin()) {
-	//echo '<pre>';print_r($handle);echo '</pre>';
-   }
    // add script handles to the array below
-   $scripts_to_asyc = array(
-   'jquery',
-   'bootstrap-min',
-   'jquery-cookie',
-   'slim-scroll', 
-   'bootstrap-select',
-   'functions'
-   );
-   
-    if ($handle == 'gform_json' || $handle == 'gform_gravityforms' || $handle == 'gform_conditional_logic' || $handle == 'gform_placeholder') {
-	$scripts_to_asyc[] = 'gform_json';   
-	$scripts_to_asyc[] = 'gform_gravityforms';
-	$scripts_to_asyc[] = 'gform_conditional_logic';
-	$scripts_to_asyc[] = 'gform_placeholder';
-   }
-   
-   foreach($scripts_to_asyc as $asyn_script) {
-      if ($asyn_script === $handle) {
-         return str_replace(' src', ' defer src', $tag);
-      }
-   }
-   
-   return $tag;
+  
+   return str_replace(' src', ' defer src', $tag);
 }
-
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-
-/*
-add_action('wp_head','add_load_css',3);
-
-function add_load_css(){ 
-    ?>  
-    <script id="loadcss"><?php 
-    readfile(get_stylesheet_directory() . '/_/js/loadCSS.js'); 
-    ?></script><?php
 }
-*/
 
 add_filter('style_loader_tag', 'link_to_loadCSS_script',10,3);
-
-function link_to_loadCSS_script($html, $handle, $href ) {
-	//echo '<pre>';print_r($handle);echo '</pre>';
-   if ($handle != 'gforms_css') {
-    $dom = new DOMDocument();
-    $dom->loadHTML($html);
-    $a = $dom->getElementById($handle.'-css');
-    return "<script>loadCSS('" . $a->getAttribute('href') . "',document.getElementById('loadcss'),'" . $a->getAttribute('media') . "');</script>\n";
-    }
+	if(!is_admin()) {
+	function link_to_loadCSS_script($html, $handle, $href ) {
+		//echo '<pre>';print_r($handle);echo '</pre>';
+	   if ($handle == 'merged-style') {
+		$dom = new DOMDocument();
+	    $dom->loadHTML($html);
+	    $a = $dom->getElementById($handle.'-css');	
+		return "<noscript id=\"deferred-styles\"><link rel=\"". $a->getAttribute('rel') ."\" type=\"text/css\" href=\"".$a->getAttribute('href')."\" media=\"none\" onload=\"if(media!='all')media='all'\"/></noscript>";
+		}
+	}
 }
-
-function custom_dequeue() {
-    wp_dequeue_style('autoptimize-toolbar');
-    wp_deregister_style('autoptimize-toolbar');
-}
-
-add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
-add_action( 'wp_head', 'custom_dequeue', 9999 );
 
 if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
 function ewp_remove_script_version( $src ){
@@ -116,12 +172,6 @@ function ewp_remove_script_version( $src ){
 }
 add_filter( 'script_loader_src', 'ewp_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'ewp_remove_script_version', 15, 1 );
-}
-
-add_action( 'after_setup_theme', 'editor_styles' );
-
-function editor_styles() {
-add_editor_style();	
 }
 
 add_theme_support('html5', array('search-form'));

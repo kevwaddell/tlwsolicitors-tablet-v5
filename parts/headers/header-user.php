@@ -20,9 +20,23 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
-	<script id="loadcss"><?php readfile(get_stylesheet_directory() . '/_/js/loadCSS-min.js');  ?></script>
 	
 	<?php wp_head(); ?>
+	
+	<script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+        document.body.classList.remove("atfc-tablet-css");
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) { 
+	      raf(function() { window.setTimeout(loadDeferredStyles, 0);});
+     } else { window.addEventListener('load', loadDeferredStyles); }
+	</script>
 	
 </head>
 
