@@ -10,7 +10,7 @@
 			?>	
 			<!-- MAIN CONTENT START -->
 			
-			<main class="page-col-red">
+			<main id="main-content">
 				
 				<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 				

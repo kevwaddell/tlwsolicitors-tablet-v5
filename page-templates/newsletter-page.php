@@ -12,7 +12,7 @@ Template Name: Newsletter sign up template
 			$sections_active = get_field('sections_active');
 			$color = get_field('page_colour');
 			 ?>	
-			 <main class="page-col-red">
+			 <main id="main-content">
 				
 				<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 				

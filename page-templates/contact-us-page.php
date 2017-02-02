@@ -18,7 +18,7 @@ $img_post = get_the_ID();
 
  ?>	
 
-<main <?php post_class('page-col-red'); ?>>
+<main id="main-content">
 	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 	

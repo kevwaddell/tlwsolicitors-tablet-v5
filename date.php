@@ -12,7 +12,7 @@ $page_icon = get_field('page_icon', $news_page->ID);
 	}
 ?>
 
-<main class="page-col-red">
+<main id="main-content">
 	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 	

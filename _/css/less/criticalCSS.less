@@ -53,6 +53,15 @@ overflow: hidden;
 	min-height: 100%;
 	overflow: hidden;	
 	}
+	
+	#main-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 50px;
+	width: 100%;
+	overflow-x: hidden;
+	}
 
 	.text-hide {
 	font: 0/0 a;
@@ -129,7 +138,10 @@ overflow: hidden;
 	.entry,
 	#continue-read-btn,
 	.service-label,
-	.header-action-btns {
+	.header-action-btns,
+	.search-form-wrap,
+	#site-map-lists,
+	.child-page-links {
 	display: none;	
 	}
 	
@@ -215,6 +227,7 @@ overflow: hidden;
 	
 	#awards-pop-up {
 	height: 104px;
+	border-bottom: 4px solid white;
 	background-color: #036937;
 	overflow: hidden;
 	-webkit-transition: all 0.3s ease-out;

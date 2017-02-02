@@ -7,7 +7,7 @@
 	$search_query = get_search_query(); 
 	//echo '<pre>';print_r($posts);echo '</pre>';
 	?>
-	<main class="page-col-red">
+	<main id="main-content">
 	 		
 	 		<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.inc'); ?>
 	 		
