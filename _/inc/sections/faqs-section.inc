@@ -14,7 +14,7 @@ if (empty($color)) {
 $color = "red";	
 }
 ?>
-<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-icon-logo col-<?php echo $color; ?>">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section col-<?php echo $color; ?>">
 <a name="faqs" id="faqs" class="section-target"></a>
 	<div class="overlay"></div>
 	<div class="container-fluid">

@@ -388,6 +388,7 @@
 			
 		//console.log("Loaded");
 		//$('body').removeClass('atfc-tablet-css');
+		$('body').removeClass('loading');
 		
 		$('.full-bg-img').each(function(index, Element) {
 		var src = $(Element).data('src');

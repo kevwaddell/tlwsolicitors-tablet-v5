@@ -22,7 +22,8 @@
 	<?php } ?>
 	
 	<meta charset="<?php bloginfo('charset'); ?>">
-
+	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	
 	<meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -36,7 +37,6 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
 	
 	<?php
 	$sections_active = get_field('sections_active'); 
