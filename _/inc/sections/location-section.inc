@@ -43,18 +43,20 @@ var marker;
 	
 
 function wide_map_init() {
+	
+	//lert("Loaded");
 
-var mapOptions = {
-	zoom: 12, 
-	center: myLatLang, 
-	mapTypeControlOptions: {
-		 mapTypeIds: [google.maps.MapTypeId.ROADMAP, TLW_MAPTYPE_ID]
-	}
-	};
-	
-wide_map = new google.maps.Map(document.getElementById('wide-map-canvas'), mapOptions);
-	
-marker = new google.maps.Marker({position: myLatLang,map: wide_map,icon: image,title: "TLW Solicitors"});
+	var mapOptions = {
+		zoom: 12, 
+		center: myLatLang, 
+		mapTypeControlOptions: {
+			 mapTypeIds: [google.maps.MapTypeId.ROADMAP, TLW_MAPTYPE_ID]
+		}
+		};
+		
+	wide_map = new google.maps.Map(document.getElementById('wide-map-canvas'), mapOptions);
+		
+	marker = new google.maps.Marker({position: myLatLang,map: wide_map,icon: image,title: "TLW Solicitors"});
 	
 };
 
@@ -65,7 +67,7 @@ google.maps.event.addDomListener(window, 'load', wide_map_init);
 <section id="wide-map" class="pg-section">
 	<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	
-	<div id="wide-map-canvas"></div>
+	<div id="wide-map-canvas" style="height: 440px; width: 100%;"></div>
 
 	<div class="location-box">
 		<address>
