@@ -132,6 +132,8 @@ if(!is_admin()) {
 if(!is_admin()) {
 add_filter( 'gform_init_scripts_footer', '__return_true' );
 
+remove_filter( 'the_content', 'amtsp_make_phone_clickable', 20);
+
 	function custom_dequeue() {
 		
 		if (!is_admin()) {
