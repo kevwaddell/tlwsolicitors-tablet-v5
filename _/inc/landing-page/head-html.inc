@@ -20,8 +20,10 @@
 	})(window,document,'script','dataLayer','GTM-PLBR4F');</script>
 	<!-- End Google Tag Manager -->
 	<?php } ?>
-
-
+	
+	<style>body{opacity: 0;}</style>
+	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	
@@ -46,7 +48,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
 	
 	<?php 
 	$form_active = get_field('lp_form_active');

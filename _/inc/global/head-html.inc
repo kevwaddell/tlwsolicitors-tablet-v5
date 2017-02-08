@@ -20,9 +20,9 @@
 	})(window,document,'script','dataLayer','GTM-PLBR4F');</script>
 	<!-- End Google Tag Manager -->
 	<?php } ?>
-	
-	<meta charset="<?php bloginfo('charset'); ?>">
+	<style>body{opacity: 0;}</style>
 	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">

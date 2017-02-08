@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head id="www-wordpress-test-dev" data-template-set="tlw-base-theme">
-
+	
+	<style>body{opacity: 0;}</style>
+	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	<meta name="robots" content="noindex, nofollow" /> 
@@ -19,7 +22,6 @@
 	<link rel="apple-touch-startup-image" href="<?php bloginfo('template_directory'); ?>/_/img/apple-start-up-img.png">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
-	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
 	
 	<?php wp_head(); ?>
 	
@@ -40,6 +42,6 @@
 	
 </head>
 
-<body id="login" <?php body_class('atfc-tablet-css'); ?>>
+<body id="login" <?php body_class('loading atfc-tablet-css'); ?>>
 	
 	<section id="user-wrap">
